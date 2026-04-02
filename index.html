@@ -213,25 +213,33 @@
     .phase-body { color: #888; }
 
     .expression-list {
+      list-style: none !important;
       border-top: 1px solid rgba(255,255,255,0.06);
-      margin-top: 24px; padding-top: 0; list-style: none;
+      margin-top: 24px; padding-top: 0; padding-left: 0;
     }
 
     .expression-list li {
-      font-size: 15px; color: #777; font-weight: 300;
-      line-height: 1.7; padding: 18px 0;
+      list-style: none !important;
+      padding: 18px 0;
       border-bottom: 1px solid rgba(255,255,255,0.06);
-      position: relative; padding-left: 0;
-      list-style: none;
     }
+
+    .expression-list li::before { display: none !important; }
 
     .expression-list li strong {
-      display: block; color: #d4c4b0;
-      font-weight: 600; font-size: 13px;
-      letter-spacing: 0.04em; margin-bottom: 4px;
+      display: block !important;
+      color: #d4c4b0 !important;
+      font-weight: 600 !important;
+      font-size: 13px !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      margin-bottom: 6px !important;
     }
 
-    .expression-list li::before { display: none; }
+    .expression-list li span {
+      display: block;
+      font-size: 15px; color: #777; font-weight: 300; line-height: 1.7;
+    }
 
     .work-headline {
       font-family: 'Cormorant Garamond', serif;
@@ -490,10 +498,10 @@
         <h3 class="phase-title">Your story, brought to life.</h3>
         <p class="phase-body">Once the foundation is in place, we build. Birchwood and its network of specialists — documentary filmmakers, brand designers, and content strategists, each working at the highest level of their craft — translate your story into the content and media your organization needs to reach your audience effectively. Because the foundation work came first, everything that follows has something real to say.</p>
         <ul class="expression-list">
-          <li><strong>Films and documentary video</strong>Organizational story films, campaign and fundraising video, short-form social content, built to award-winning documentary standards</li>
-          <li><strong>Content strategy and creation</strong>Editorial voice, website copy, and ongoing content your team can sustain</li>
-          <li><strong>Ongoing partnership and retainer</strong>A consistent strategic voice and content partner over time: monthly strategy, content development, campaign support, and as-needed counsel</li>
-          <li><strong>Trusted partners</strong>For visual identity, brand design, and logo systems, Birchwood connects you with vetted specialists who do this work at the highest level</li>
+          <li><strong>Films and documentary video</strong><span>Organizational story films, campaign and fundraising video, short-form social content, built to award-winning documentary standards</span></li>
+          <li><strong>Content strategy and creation</strong><span>Editorial voice, website copy, and ongoing content your team can sustain</span></li>
+          <li><strong>Ongoing partnership and retainer</strong><span>A consistent strategic voice and content partner over time: monthly strategy, content development, campaign support, and as-needed counsel</span></li>
+          <li><strong>Trusted partners</strong><span>For visual identity, brand design, and logo systems, Birchwood connects you with vetted specialists who do this work at the highest level</span></li>
         </ul>
       </div>
     </div>
