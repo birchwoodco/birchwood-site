@@ -205,16 +205,19 @@
 
     .phase-label { color: var(--clay); }
 
-    .phase-title { color: var(--off-white) !important; }
+    .phase-title {
+      color: var(--off-white) !important;
+      font-style: italic;
+    }
 
     .phase-body { color: #888; }
 
-    .expression-list { border-top: 1px solid #2a2a2a; margin-top: 24px; padding-top: 0; }
+    .expression-list { border-top: 1px solid #1a1a1a; margin-top: 24px; padding-top: 0; }
 
     .expression-list li {
-      font-size: 15px; color: #888; font-weight: 300;
+      font-size: 15px; color: #666; font-weight: 300;
       line-height: 1.7; padding: 16px 0 16px 16px;
-      border-bottom: 1px solid #1e1e1e; position: relative;
+      border-bottom: 1px solid #181818; position: relative;
       list-style: none;
     }
 
@@ -237,7 +240,7 @@
     .phase {
       display: grid; grid-template-columns: 80px 1fr;
       gap: 40px; margin-bottom: 72px;
-      padding-bottom: 72px; border-bottom: 1px solid #222;
+      padding-bottom: 72px; border-bottom: 1px solid #1a1a1a;
     }
 
     .phase:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
