@@ -9,10 +9,10 @@
   <meta name="description" content="Birchwood helps mission-driven founders, small teams, and purpose-led organizations clarify their story, align their message, and build brands with soul and strategy.">
   <meta name="robots" content="index, follow">
 
-  <!-- CANONICAL: tells Google www.birchwood.co is the one true URL -->
+  <!-- CANONICAL -->
   <link rel="canonical" href="https://www.birchwood.co/">
 
-  <!-- OPEN GRAPH (social sharing + Google preview) -->
+  <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.birchwood.co/">
   <meta property="og:title" content="Birchwood Consulting | Brand & Message Alignment">
@@ -27,7 +27,356 @@
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- YOUR EXISTING STYLES CONTINUE BELOW -->
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #0D0D0D;
+      --off-white: #F5F2EE;
+      --warm-white: #FAF8F5;
+      --clay: #A47551;
+      --charcoal: #2A2A2A;
+      --mid: #5A5A5A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--warm-white);
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 48px;
+      background: var(--warm-white);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--black); text-decoration: none;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+
+    .nav-links a {
+      font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+      font-weight: 500; color: var(--mid); text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--black); }
+
+    .btn-nav {
+      color: var(--off-white) !important;
+      background: var(--black); padding: 12px 24px;
+      transition: background 0.2s !important;
+    }
+
+    .btn-nav:hover { background: var(--clay) !important; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+
+    .hero-left {
+      background: var(--black);
+      padding: 80px 64px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--clay); font-weight: 500; margin-bottom: 32px;
+    }
+
+    .hero-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 5vw, 80px);
+      line-height: 1.05; font-weight: 300;
+      color: var(--off-white); margin-bottom: 32px;
+    }
+
+    .hero-headline em { font-style: italic; color: var(--clay); }
+
+    .hero-sub {
+      font-size: 17px; line-height: 1.75; color: #A8A8A8;
+      max-width: 440px; margin-bottom: 48px; font-weight: 300;
+    }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--clay); color: #fff;
+      padding: 16px 32px;
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+      font-weight: 500; text-decoration: none; transition: background 0.2s;
+      align-self: flex-start;
+    }
+
+    .btn-primary:hover { background: #8C6240; }
+
+    .hero-right {
+      background: var(--off-white);
+      display: flex; align-items: center; justify-content: center;
+      padding: 80px 64px; position: relative; overflow: hidden;
+    }
+
+    .hero-right::before {
+      content: ''; position: absolute; top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      border: 1px solid rgba(164,117,81,0.2); border-radius: 50%;
+    }
+
+    .hero-right::after {
+      content: ''; position: absolute; bottom: -60px; left: -60px;
+      width: 250px; height: 250px;
+      border: 1px solid rgba(164,117,81,0.15); border-radius: 50%;
+    }
+
+    .hero-statement { position: relative; z-index: 1; max-width: 380px; }
+
+    .hero-statement blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px; line-height: 1.5;
+      font-weight: 300; font-style: italic;
+      color: var(--charcoal); margin-bottom: 24px;
+    }
+
+    .hero-statement cite {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--clay); font-style: normal;
+    }
+
+    /* SECTION BASE */
+    section { padding: 100px 48px; }
+
+    .section-label {
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--clay); font-weight: 500; margin-bottom: 16px;
+    }
+
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 300; line-height: 1.15;
+      color: var(--black); margin-bottom: 24px;
+    }
+
+    .section-body {
+      font-size: 17px; line-height: 1.8;
+      color: var(--mid); max-width: 580px; font-weight: 300;
+    }
+
+    /* METHODOLOGY */
+    .methodology { background: var(--off-white); }
+
+    .methodology-inner { max-width: 760px; margin: 0 auto; }
+
+    .methodology-inner p {
+      font-size: 17px; line-height: 1.85; color: var(--mid);
+      font-weight: 300; margin-bottom: 20px;
+    }
+
+    /* THE WORK */
+    .work { background: var(--warm-white); }
+
+    .work-inner { max-width: 900px; margin: 0 auto; }
+
+    .work-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 300; line-height: 1.15;
+      color: var(--black); margin-bottom: 12px;
+    }
+
+    .work-intro {
+      font-size: 15px; color: var(--mid); font-weight: 300;
+      letter-spacing: 0.04em; margin-bottom: 72px;
+    }
+
+    .phase {
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: 40px; margin-bottom: 72px;
+      padding-bottom: 72px; border-bottom: 1px solid #E0D8D0;
+    }
+
+    .phase:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .phase-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 64px; font-weight: 300; color: #D8D2C8;
+      line-height: 1;
+    }
+
+    .phase-label {
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--clay); font-weight: 500; margin-bottom: 8px;
+    }
+
+    .phase-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 300; color: var(--black);
+      line-height: 1.2; margin-bottom: 20px;
+    }
+
+    .phase-body {
+      font-size: 16px; line-height: 1.85; color: var(--mid);
+      font-weight: 300; margin-bottom: 16px;
+    }
+
+    .expression-list {
+      list-style: none; margin-top: 24px;
+      border-top: 1px solid #E0D8D0; padding-top: 24px;
+    }
+
+    .expression-list li {
+      font-size: 15px; color: var(--mid); font-weight: 300;
+      line-height: 1.7; padding: 12px 0;
+      border-bottom: 1px solid #E0D8D0;
+      padding-left: 16px; position: relative;
+    }
+
+    .expression-list li::before {
+      content: ''; position: absolute; left: 0; top: 22px;
+      width: 4px; height: 4px; background: var(--clay); border-radius: 50%;
+    }
+
+    .expression-list li strong { color: var(--charcoal); font-weight: 500; }
+
+    /* QUOTE BAND */
+    .quote-band {
+      background: var(--black); padding: 80px 48px; text-align: center;
+    }
+
+    .quote-band blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 300; font-style: italic;
+      color: var(--off-white); line-height: 1.5;
+      max-width: 700px; margin: 0 auto 24px;
+    }
+
+    .quote-band cite {
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--clay); font-style: normal;
+    }
+
+    /* ABOUT */
+    .about { background: var(--warm-white); }
+
+    .about-inner { max-width: 760px; margin: 0 auto; }
+
+    .about-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 300; color: var(--black);
+      line-height: 1.15; margin-bottom: 16px;
+    }
+
+    .about-body {
+      font-size: 16px; line-height: 1.85; color: var(--mid);
+      font-weight: 300; margin-bottom: 20px;
+    }
+
+    .about-divider {
+      width: 48px; height: 1px; background: var(--clay);
+      margin: 40px 0;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: var(--clay); padding: 100px 48px; text-align: center;
+    }
+
+    .cta-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 300; color: #fff;
+      line-height: 1.15; margin-bottom: 20px;
+    }
+
+    .cta-body {
+      font-size: 17px; line-height: 1.75;
+      color: rgba(255,255,255,0.8);
+      max-width: 480px; margin: 0 auto 48px;
+      font-weight: 300;
+    }
+
+    .btn-white {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #fff; color: var(--clay);
+      padding: 18px 40px;
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+      font-weight: 500; text-decoration: none; transition: all 0.2s;
+    }
+
+    .btn-white:hover { background: var(--black); color: #fff; }
+
+    /* FOOTER */
+    footer {
+      background: var(--black); padding: 48px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--off-white); margin-bottom: 6px;
+    }
+
+    .footer-tagline {
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #444;
+    }
+
+    footer nav {
+      position: static; background: none; border: none; padding: 0;
+      display: flex; gap: 32px;
+    }
+
+    footer nav a {
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #555; text-decoration: none; transition: color 0.2s;
+    }
+
+    footer nav a:hover { color: var(--clay); }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 20px 24px; }
+      .nav-links { gap: 20px; }
+      .nav-links li:not(:last-child) { display: none; }
+
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 60px 24px; }
+      .hero-right { display: none; }
+
+      section { padding: 64px 24px; }
+
+      .phase { grid-template-columns: 1fr; gap: 16px; }
+      .phase-num { font-size: 40px; }
+
+      .quote-band { padding: 60px 24px; }
+      .cta-band { padding: 64px 24px; }
+
+      footer { flex-direction: column; gap: 32px; padding: 40px 24px; text-align: center; }
+      footer nav { position: static; }
+    }
+  </style>
 </head>
 <body>
 
@@ -116,12 +465,12 @@
   <cite>Maya Angelou</cite>
 </div>
 
-<!-- ABOUT (merged) -->
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-inner">
     <p class="section-label">About Birchwood</p>
     <h2 class="about-headline">Strategy with soul.</h2>
-    <p class="diff-values" style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--clay);margin-bottom:28px;line-height:1.7">Faith-rooted imagination. Clarity without reduction.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--clay);margin-bottom:28px;line-height:1.7">Faith-rooted imagination. Clarity without reduction.</p>
     <p class="about-body">We ask questions most strategists won't, sit with complexity most processes skip, and help you find what's true before we tell you how to say it. We care about helping you spend every dollar wisely and in full integrity with your mission.</p>
 
     <div class="about-divider"></div>
