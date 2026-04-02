@@ -1,121 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Birchwood</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --black:#0D0D0D;
-  --off-white:#F5F2EE;
-  --warm-white:#FAF8F5;
-  --clay:#A47551;
-  --charcoal:#2A2A2A;
-  --mid:#5A5A5A;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--charcoal);font-size:16px;line-height:1.6}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:24px 48px;background:var(--warm-white);border-bottom:1px solid rgba(0,0,0,0.08)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none}
-.nav-links{display:flex;align-items:center;gap:40px;list-style:none}
-.nav-links a{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;color:var(--mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--black)}
-.btn-nav{color:#fff!important;background:var(--black);padding:12px 24px;transition:background 0.2s!important}
-.btn-nav:hover{background:var(--clay)!important;color:#fff!important}
+  <!-- PRIMARY SEO -->
+  <title>Birchwood Consulting | Brand & Message Alignment for Mission-Driven Organizations</title>
+  <meta name="description" content="Birchwood helps mission-driven founders, small teams, and purpose-led organizations clarify their story, align their message, and build brands with soul and strategy.">
+  <meta name="robots" content="index, follow">
 
-/* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:73px}
-.hero-left{background:var(--black);padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
-.hero-eyebrow{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:28px}
-.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,4.5vw,68px);line-height:1.1;font-weight:300;color:var(--off-white);margin-bottom:28px}
-.hero-sub{font-size:16px;line-height:1.8;color:#999;max-width:420px;margin-bottom:48px;font-weight:300}
-.btn-primary{display:inline-block;background:var(--clay);color:#fff;padding:16px 32px;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:background 0.2s;align-self:flex-start}
-.btn-primary:hover{background:#8C6240}
-.hero-right{background:var(--off-white);display:flex;align-items:center;justify-content:center;padding:80px 64px;position:relative;overflow:hidden}
-.hero-right::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border:1px solid rgba(164,117,81,0.2);border-radius:50%}
-.hero-right::after{content:'';position:absolute;bottom:-60px;left:-60px;width:250px;height:250px;border:1px solid rgba(164,117,81,0.15);border-radius:50%}
-.hero-statement{position:relative;z-index:1;max-width:380px}
-.hero-statement blockquote{font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.55;font-weight:300;font-style:italic;color:var(--charcoal);margin-bottom:24px}
-.hero-statement cite{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--clay);font-style:normal}
+  <!-- CANONICAL: tells Google www.birchwood.co is the one true URL -->
+  <link rel="canonical" href="https://www.birchwood.co/">
 
-/* METHODOLOGY */
-.methodology{background:var(--warm-white);padding:100px 48px;border-bottom:1px solid rgba(0,0,0,0.06)}
-.methodology-inner{max-width:760px;margin:0 auto}
-.section-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:16px}
-.methodology p{font-size:18px;line-height:1.85;color:var(--mid);font-weight:300;margin-bottom:16px}
-.methodology p:last-child{margin-bottom:0}
+  <!-- OPEN GRAPH (social sharing + Google preview) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.birchwood.co/">
+  <meta property="og:title" content="Birchwood Consulting | Brand & Message Alignment">
+  <meta property="og:description" content="Strategic brand and message alignment for soul-driven leaders, founders, and organizations. Rooted in story. Guided by values.">
+  <meta property="og:site_name" content="Birchwood Consulting">
 
-/* THE WORK */
-.work{background:var(--black);padding:100px 48px}
-.work-inner{max-width:1100px;margin:0 auto}
-.work .section-label{color:var(--clay)}
-.work-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--off-white);margin-bottom:16px;line-height:1.15}
-.work-intro{font-size:16px;color:#888;font-weight:300;line-height:1.8;max-width:600px;margin-bottom:72px}
-.phase{border-top:1px solid #222;padding:56px 0;display:grid;grid-template-columns:200px 1fr;gap:64px}
-.phase:last-child{border-bottom:1px solid #222}
-.phase-num{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;color:#222;line-height:1;padding-top:8px}
-.phase-content{}
-.phase-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--clay);margin-bottom:12px}
-.phase-title{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;font-style:italic;color:var(--off-white);margin-bottom:24px;line-height:1.2}
-.phase-body{font-size:15px;color:#999;line-height:1.85;font-weight:300;margin-bottom:24px}
-.phase-body + .phase-body{margin-top:-12px}
-.expression-list{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:12px}
-.expression-list li{font-size:14px;color:#777;font-weight:300;padding-left:20px;position:relative;line-height:1.7}
-.expression-list li::before{content:'—';position:absolute;left:0;color:var(--clay)}
-.expression-list strong{color:#aaa;font-weight:500}
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Birchwood Consulting | Brand & Message Alignment">
+  <meta name="twitter:description" content="Strategic brand and message alignment for soul-driven leaders, founders, and organizations.">
 
-/* DIFFERENTIATOR */
-.differentiator{background:var(--off-white);padding:100px 48px;border-top:1px solid #E0D8D0}
-.diff-inner{max-width:760px;margin:0 auto}
-.diff-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.5vw,48px);font-weight:300;color:var(--black);margin-bottom:32px;line-height:1.2}
-.about-divider{width:48px;height:1px;background:var(--clay);opacity:0.4;margin:40px 0}
-.diff-values{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--clay);margin-bottom:28px;line-height:1.7}
-.diff-body{font-size:17px;line-height:1.9;color:var(--mid);font-weight:300;margin-bottom:20px}
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-/* QUOTE */
-.quote-band{background:var(--warm-white);padding:80px 48px;text-align:center;border-top:1px solid rgba(0,0,0,0.06)}
-.quote-band blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;font-style:italic;color:var(--charcoal);max-width:700px;margin:0 auto 20px;line-height:1.5}
-.quote-band cite{font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--clay);font-style:normal}
-
-/* ABOUT */
-.about{background:var(--black);padding:100px 48px}
-.about-inner{max-width:760px;margin:0 auto}
-.about .section-label{color:var(--clay)}
-.about-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3vw,42px);font-weight:300;color:var(--off-white);margin-bottom:40px;line-height:1.25}
-.about-body{font-size:16px;line-height:1.9;color:#888;font-weight:300;margin-bottom:20px}
-.about-values{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--clay);margin-top:40px;line-height:1.8}
-
-/* CTA */
-.cta-band{background:var(--clay);padding:100px 48px;text-align:center}
-.cta-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,56px);font-weight:300;color:#fff;margin-bottom:20px;line-height:1.15}
-.cta-body{font-size:17px;color:rgba(255,255,255,0.75);max-width:480px;margin:0 auto 48px;font-weight:300;line-height:1.8}
-.btn-white{display:inline-block;background:#fff;color:var(--clay);padding:18px 48px;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;text-decoration:none;transition:background 0.2s}
-.btn-white:hover{background:var(--off-white)}
-
-/* FOOTER */
-footer{background:var(--black);padding:48px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #1a1a1a}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:0.1em;text-transform:uppercase;color:var(--off-white);font-weight:600}
-.footer-tagline{font-size:11px;color:#333;margin-top:4px;letter-spacing:0.08em}
-footer nav a{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#444;text-decoration:none;margin-left:32px;transition:color 0.2s}
-footer nav a:hover{color:var(--off-white)}
-
-@media(max-width:900px){
-  nav{padding:20px 24px}
-  .nav-links{display:none}
-  .hero{grid-template-columns:1fr}
-  .hero-left{padding:60px 32px;min-height:100vh}
-  .hero-right{display:none}
-  section,.methodology,.work,.differentiator,.quote-band,.about,.cta-band{padding:64px 24px}
-  .phase{grid-template-columns:1fr;gap:16px}
-  .phase-num{font-size:48px}
-  footer{flex-direction:column;gap:24px;text-align:center}
-  footer nav a{margin:0 12px}
-}
-</style>
+  <!-- YOUR EXISTING STYLES CONTINUE BELOW -->
 </head>
 <body>
 
