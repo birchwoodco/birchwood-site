@@ -1,606 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birchwood — Brand & Story Strategy for Mission-Driven Organizations</title>
+  <meta name="description" content="Birchwood helps mission-driven organizations surface what's true, align their story, and build content that carries them there." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 
-  <!-- PRIMARY SEO -->
-  <title>Birchwood Consulting | Brand & Message Alignment for Mission-Driven Organizations</title>
-  <meta name="description" content="Birchwood helps mission-driven founders, small teams, and purpose-led organizations clarify their story, align their message, and build brands with soul and strategy.">
-  <meta name="robots" content="index, follow">
-
-  <!-- CANONICAL -->
-  <link rel="canonical" href="https://www.birchwood.co/">
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.birchwood.co/">
-  <meta property="og:title" content="Birchwood Consulting | Brand & Message Alignment">
-  <meta property="og:description" content="Strategic brand and message alignment for soul-driven leaders, founders, and organizations. Rooted in story. Guided by values.">
-  <meta property="og:site_name" content="Birchwood Consulting">
-
-  <!-- TWITTER CARD -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Birchwood Consulting | Brand & Message Alignment">
-  <meta name="twitter:description" content="Strategic brand and message alignment for soul-driven leaders, founders, and organizations.">
-
-  <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black: #0D0D0D;
-      --off-white: #F5F2EE;
-      --warm-white: #FAF8F5;
+      --black: #1C1916;
+      --charcoal: #2E2A26;
       --clay: #A47551;
-      --charcoal: #2A2A2A;
-      --mid: #5A5A5A;
+      --clay-dark: #8C6240;
+      --clay-light: rgba(164,117,81,0.08);
+      --off-white: #F9F7F3;
+      --warm-white: #F2EDE6;
+      --birch-beige: #E0D5C5;
+      --mid: #6B6560;
+      --light: #999490;
     }
 
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--warm-white);
+      background: var(--off-white);
       color: var(--charcoal);
-      font-size: 16px;
-      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
     /* NAV */
-    nav {
+    .bw-nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 24px 48px;
-      background: var(--warm-white);
-      border-bottom: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 64px; height: 68px;
+      background: rgba(249,247,243,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--birch-beige);
     }
-
-    .nav-logo {
+    .bw-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 22px; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--black); text-decoration: none;
+      font-size: 22px; font-weight: 400; letter-spacing: 0.04em;
+      color: var(--charcoal); text-decoration: none;
     }
-
-    .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
-
-    .nav-links a {
-      font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
-      font-weight: 500; color: var(--mid); text-decoration: none;
+    .bw-nav-links { display: flex; gap: 40px; list-style: none; }
+    .bw-nav-links a {
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--mid); text-decoration: none; font-weight: 400;
       transition: color 0.2s;
     }
-
-    .nav-links a:hover { color: var(--black); }
-
-    .btn-nav {
-      color: var(--off-white) !important;
-      background: var(--black); padding: 12px 24px;
-      transition: background 0.2s !important;
-    }
-
-    .btn-nav:hover { background: var(--clay) !important; }
+    .bw-nav-links a:hover { color: var(--charcoal); }
 
     /* HERO */
-    .hero {
-      min-height: 100vh;
+    .bw-hero {
       display: grid; grid-template-columns: 1fr 1fr;
-      padding-top: 80px;
+      min-height: 100vh; padding-top: 68px;
     }
-
-    .hero-left {
+    .bw-hero-left {
       background: var(--black);
-      padding: 80px 64px;
       display: flex; flex-direction: column; justify-content: center;
+      padding: 96px 72px; position: relative; overflow: hidden;
     }
-
-    .hero-eyebrow {
-      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    .bw-hero-left::after {
+      content: '';
+      position: absolute; bottom: -120px; left: -80px;
+      width: 400px; height: 400px;
+      border: 1px solid rgba(164,117,81,0.12); border-radius: 50%;
+      pointer-events: none;
+    }
+    .bw-eyebrow {
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
       color: var(--clay); font-weight: 500; margin-bottom: 32px;
     }
-
-    .hero-headline {
+    .bw-hero-headline {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(52px, 5vw, 80px);
-      line-height: 1.05; font-weight: 300;
-      color: var(--off-white); margin-bottom: 32px;
+      font-size: clamp(40px, 4.2vw, 68px);
+      line-height: 1.1; font-weight: 300;
+      color: var(--off-white); margin-bottom: 48px;
+      position: relative; z-index: 1;
     }
-
-    .hero-headline em { font-style: italic; color: var(--clay); }
-
-    .hero-sub {
-      font-size: 17px; line-height: 1.75; color: #A8A8A8;
-      max-width: 440px; margin-bottom: 48px; font-weight: 300;
-    }
-
-    .btn-primary {
+    .bw-hero-headline em { font-style: italic; color: var(--clay); font-weight: 300; }
+    .bw-btn-primary {
       display: inline-flex; align-items: center; justify-content: center;
       background: var(--clay); color: #fff;
       padding: 16px 32px;
-      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
-      font-weight: 500; text-decoration: none; transition: background 0.2s;
-      align-self: flex-start;
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      font-weight: 500; text-decoration: none;
+      transition: background 0.2s; align-self: flex-start;
+      position: relative; z-index: 1;
     }
-
-    .btn-primary:hover { background: #8C6240; }
-
-    .hero-right {
-      background: var(--off-white);
+    .bw-btn-primary:hover { background: var(--clay-dark); }
+    .bw-hero-right {
+      background: var(--warm-white);
       display: flex; align-items: center; justify-content: center;
-      padding: 80px 64px; position: relative; overflow: hidden;
+      padding: 96px 72px; position: relative; overflow: hidden;
     }
-
-    .hero-right::before {
+    .bw-hero-right::before {
       content: ''; position: absolute; top: -100px; right: -100px;
-      width: 400px; height: 400px;
-      border: 1px solid rgba(164,117,81,0.2); border-radius: 50%;
-    }
-
-    .hero-right::after {
-      content: ''; position: absolute; bottom: -60px; left: -60px;
-      width: 250px; height: 250px;
+      width: 420px; height: 420px;
       border: 1px solid rgba(164,117,81,0.15); border-radius: 50%;
     }
-
-    .hero-statement { position: relative; z-index: 1; max-width: 380px; }
-
-    .hero-statement blockquote {
+    .bw-hero-right::after {
+      content: ''; position: absolute; bottom: -60px; left: -60px;
+      width: 260px; height: 260px;
+      border: 1px solid rgba(164,117,81,0.1); border-radius: 50%;
+    }
+    .bw-hero-statement { position: relative; z-index: 1; max-width: 380px; }
+    .bw-hero-statement p {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 26px; line-height: 1.5;
+      font-size: 26px; line-height: 1.6;
       font-weight: 300; font-style: italic;
-      color: var(--charcoal); margin-bottom: 24px;
+      color: var(--charcoal);
     }
 
-    .hero-statement cite {
-      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--clay); font-style: normal;
+    /* PAIN POINTS */
+    .bw-pain { background: var(--off-white); padding: 112px 72px 0; }
+    .bw-pain-inner { max-width: 1160px; margin: 0 auto; }
+    .bw-section-label {
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--clay); font-weight: 500; margin-bottom: 20px;
     }
-
-    /* SECTION BASE */
-    section { padding: 100px 48px; }
-
-    .section-label {
-      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--clay); font-weight: 500; margin-bottom: 16px;
-    }
-
-    .section-heading {
+    .bw-section-heading {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 4vw, 56px);
-      font-weight: 300; line-height: 1.15;
-      color: var(--black); margin-bottom: 24px;
+      font-size: clamp(30px, 3vw, 48px);
+      font-weight: 300; line-height: 1.2; color: var(--charcoal);
+    }
+    .bw-pain-intro {
+      font-size: 16px; line-height: 1.8; color: var(--mid);
+      font-weight: 300; max-width: 600px;
+      margin-top: 20px; margin-bottom: 72px;
     }
 
-    .section-body {
-      font-size: 17px; line-height: 1.8;
-      color: var(--mid); max-width: 580px; font-weight: 300;
+    /* Pain grid — full-bleed cards */
+    .bw-pain-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
+      background: var(--birch-beige);
+      border: 2px solid var(--birch-beige);
     }
-
-    /* PROBLEMS */
-    .problems { background: var(--warm-white); }
-    .problems-inner { max-width: 1100px; margin: 0 auto; }
-    .problems-header { max-width: 560px; margin-bottom: 56px; }
-    .problems-h2 {
+    .bw-pain-item {
+      background: var(--off-white);
+      padding: 52px 56px;
+      position: relative;
+      transition: background 0.25s;
+    }
+    .bw-pain-item:hover { background: #FDFBF8; }
+    .bw-pain-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(32px, 3.5vw, 48px);
-      font-weight: 300; color: var(--black); line-height: 1.15;
+      font-size: 24px; font-weight: 400;
+      color: var(--charcoal); margin-bottom: 16px;
     }
-    .problems-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    .bw-pain-rule {
+      width: 32px; height: 1px; background: var(--clay);
+      margin-bottom: 20px;
     }
-    .problem-item {
-      background: var(--off-white); padding: 40px 36px;
-      border-left: 2px solid transparent; transition: border-color 0.2s;
-    }
-    .problem-item:hover { border-left-color: var(--clay); }
-    .problem-title {
-      font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-      font-weight: 600; color: var(--black); margin-bottom: 12px;
-    }
-    .problem-body {
-      font-size: 15px; line-height: 1.75; color: var(--mid); font-weight: 300;
-    }
-
-    /* METHODOLOGY */
-    .methodology { background: var(--off-white); }
-
-    .methodology-inner { max-width: 760px; margin: 0 auto; }
-
-    .methodology-inner .section-label { color: var(--clay); }
-
-    .methodology-inner p {
-      font-size: 17px; line-height: 1.85; color: var(--mid);
-      font-weight: 300; margin-bottom: 20px;
-    }
-
-    /* THE WORK */
-    .work { background: var(--black); }
-
-    .work-inner { max-width: 900px; margin: 0 auto; }
-
-    .work .section-label { color: var(--clay); }
-
-    .work .work-headline { color: var(--off-white); }
-
-    .work .work-intro { color: #666; }
-
-    .phase-num { color: #333; }
-
-    .phase-label { color: var(--clay); }
-
-    .phase-title {
-      color: var(--off-white) !important;
-      font-style: italic;
-    }
-
-    .phase-body { color: #888; }
-
-    .expression-list {
-      list-style: none !important;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      margin-top: 24px; padding-top: 0; padding-left: 0;
-    }
-
-    .expression-list li {
-      list-style: none !important;
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .expression-list li::before { display: none !important; }
-
-    .expression-list li strong {
-      display: block !important;
-      color: #d4c4b0 !important;
-      font-weight: 600 !important;
-      font-size: 13px !important;
-      letter-spacing: 0.06em !important;
-      text-transform: uppercase !important;
-      margin-bottom: 6px !important;
-    }
-
-    .expression-list li span {
-      display: block;
-      font-size: 15px; color: #777; font-weight: 300; line-height: 1.7;
-    }
-
-    .work-headline {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 4vw, 52px);
-      font-weight: 300; line-height: 1.15;
-      color: var(--black); margin-bottom: 12px;
-    }
-
-    .work-intro {
-      font-size: 15px; color: var(--mid); font-weight: 300;
-      letter-spacing: 0.04em; margin-bottom: 72px;
-    }
-
-    .phase {
-      display: grid; grid-template-columns: 80px 1fr;
-      gap: 40px; margin-bottom: 72px;
-      padding-bottom: 72px; border-bottom: 1px solid #1a1a1a;
-    }
-
-    .phase:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-    .phase-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 64px; font-weight: 300; color: #D8D2C8;
-      line-height: 1;
-    }
-
-    .phase-label {
-      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--clay); font-weight: 500; margin-bottom: 8px;
-    }
-
-    .phase-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(28px, 3vw, 40px);
-      font-weight: 300; color: var(--black);
-      line-height: 1.2; margin-bottom: 20px;
-    }
-
-    .phase-body {
-      font-size: 16px; line-height: 1.85; color: var(--mid);
-      font-weight: 300; margin-bottom: 16px;
-    }
-
-    .expression-list {
-      list-style: none; margin-top: 24px;
-      border-top: 1px solid #E0D8D0; padding-top: 24px;
-    }
-
-    .expression-list li {
-      font-size: 15px; color: var(--mid); font-weight: 300;
-      line-height: 1.7; padding: 12px 0;
-      border-bottom: 1px solid #E0D8D0;
-      padding-left: 16px; position: relative;
-    }
-
-    .expression-list li::before {
-      content: ''; position: absolute; left: 0; top: 22px;
-      width: 4px; height: 4px; background: var(--clay); border-radius: 50%;
-    }
-
-    .expression-list li strong { color: var(--charcoal); font-weight: 500; }
-
-    /* QUOTE BAND */
-    .quote-band {
-      background: var(--black); padding: 80px 48px; text-align: center;
-    }
-
-    .quote-band blockquote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(24px, 3vw, 36px);
-      font-weight: 300; font-style: italic;
-      color: var(--off-white); line-height: 1.5;
-      max-width: 700px; margin: 0 auto 24px;
-    }
-
-    .quote-band cite {
-      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--clay); font-style: normal;
-    }
-
-    /* ABOUT */
-    .about { background: var(--warm-white); }
-
-    .about-inner { max-width: 760px; margin: 0 auto; }
-
-    .about .section-label { color: var(--clay); }
-
-    .about-headline {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 4vw, 52px);
-      font-weight: 300; color: var(--black);
-      line-height: 1.15; margin-bottom: 16px;
-    }
-
-    .about-body {
-      font-size: 16px; line-height: 1.85; color: var(--mid);
-      font-weight: 300; margin-bottom: 20px;
-    }
-
-    .about-divider {
-      width: 48px; height: 1px; background: var(--clay);
-      margin: 40px 0;
-    }
-
-    /* CTA BAND */
-    .cta-band {
-      background: var(--clay); padding: 100px 48px; text-align: center;
-    }
-
-    .cta-headline {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 4vw, 56px);
-      font-weight: 300; color: #fff;
-      line-height: 1.15; margin-bottom: 20px;
-    }
-
-    .cta-body {
-      font-size: 17px; line-height: 1.75;
-      color: rgba(255,255,255,0.8);
-      max-width: 480px; margin: 0 auto 48px;
+    .bw-pain-body {
+      font-size: 15px; line-height: 1.85; color: var(--mid);
       font-weight: 300;
     }
 
-    .btn-white {
-      display: inline-flex; align-items: center; justify-content: center;
-      background: #fff; color: var(--clay);
-      padding: 18px 40px;
-      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
-      font-weight: 500; text-decoration: none; transition: all 0.2s;
+
+
+    /* HOW WE WORK */
+    .bw-method { background: var(--warm-white); padding: 112px 72px; }
+    .bw-method-inner { max-width: 1160px; margin: 0 auto; }
+    .bw-method-intro {
+      font-size: 15px; line-height: 1.8; color: var(--mid);
+      font-weight: 300; max-width: 520px;
+      margin-top: 16px; margin-bottom: 72px;
+    }
+    .bw-phases {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    }
+    .bw-phase {
+      padding: 0 56px 0 0; border-right: 1px solid var(--birch-beige);
+    }
+    .bw-phase:last-child { border-right: none; padding-right: 0; padding-left: 56px; }
+    .bw-phase:nth-child(2) { padding-left: 56px; }
+    .bw-phase-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 72px; font-weight: 300;
+      color: var(--birch-beige); line-height: 1; margin-bottom: 24px;
+      display: block;
+    }
+    .bw-phase-name {
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--clay); font-weight: 500; margin-bottom: 16px;
+    }
+    .bw-phase-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 400;
+      color: var(--charcoal); margin-bottom: 20px; line-height: 1.3;
+    }
+    .bw-phase-body {
+      font-size: 14px; line-height: 1.9; color: var(--mid);
+      font-weight: 300; margin-bottom: 24px;
+    }
+    /* Expression deliverables only */
+    .bw-phase-deliverables {
+      list-style: none; border-top: 1px solid var(--birch-beige); padding-top: 20px;
+    }
+    .bw-phase-deliverables li {
+      font-size: 12px; color: var(--mid); letter-spacing: 0.02em;
+      padding: 7px 0; border-bottom: 1px solid var(--birch-beige);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .bw-phase-deliverables li::before {
+      content: ''; width: 3px; height: 3px;
+      background: var(--clay); border-radius: 50%; flex-shrink: 0;
     }
 
-    .btn-white:hover { background: var(--black); color: #fff; }
+    /* ABOUT */
+    .bw-about { background: var(--off-white); padding: 112px 72px; }
+    .bw-about-inner { max-width: 900px; margin: 0 auto; }
+
+    /* Values — unboxed, clean row */
+    .bw-values-inline {
+      display: flex; flex-wrap: wrap;
+      gap: 0; margin-bottom: 64px; margin-top: 48px;
+      border-top: 1px solid var(--birch-beige);
+    }
+    .bw-value-item {
+      flex: 1; min-width: 180px;
+      padding: 32px 32px 32px 0;
+      border-right: 1px solid var(--birch-beige);
+    }
+    .bw-value-item:last-child { border-right: none; padding-right: 0; padding-left: 32px; }
+    .bw-value-item:nth-child(2) { padding-left: 32px; }
+    .bw-value-item small {
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--clay); font-weight: 400; display: block; margin-bottom: 10px;
+    }
+    .bw-value-item span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-style: italic; font-weight: 300;
+      color: var(--charcoal); display: block;
+    }
+
+    .bw-about-body {
+      font-size: 16px; line-height: 1.9; color: var(--mid);
+      font-weight: 300; margin-bottom: 24px;
+    }
+    .bw-about-body strong { color: var(--charcoal); font-weight: 500; }
+    .bw-about-divider {
+      width: 40px; height: 1px; background: var(--birch-beige); margin: 40px 0;
+    }
+    .bw-founder-label {
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--clay); margin-bottom: 16px;
+    }
+
+    /* CTA */
+    .bw-cta { background: var(--charcoal); padding: 112px 72px; text-align: center; }
+    .bw-cta-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 60px);
+      font-weight: 300; color: var(--off-white);
+      margin-bottom: 20px; line-height: 1.15;
+    }
+    .bw-cta-body {
+      font-size: 16px; line-height: 1.75; color: #888;
+      max-width: 480px; margin: 0 auto 12px; font-weight: 300;
+    }
+    .bw-cta-note {
+      font-size: 12px; color: #555; letter-spacing: 0.04em;
+      margin-bottom: 48px; font-style: italic;
+    }
+    .bw-btn-clay {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--clay); color: #fff;
+      padding: 18px 40px;
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      font-weight: 500; text-decoration: none; transition: background 0.2s;
+    }
+    .bw-btn-clay:hover { background: var(--clay-dark); }
 
     /* FOOTER */
-    footer {
-      background: var(--black); padding: 48px;
-      display: flex; justify-content: space-between; align-items: center;
-      border-top: 1px solid #1a1a1a;
+    .bw-footer {
+      background: var(--black); padding: 40px 72px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid #2a2620;
     }
-
-    .footer-logo {
+    .bw-footer-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 20px; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--off-white); margin-bottom: 6px;
+      font-size: 20px; color: var(--off-white); font-weight: 400; margin-bottom: 6px;
     }
-
-    .footer-tagline {
-      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-      color: #444;
+    .bw-footer-tag {
+      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #444;
     }
-
-    footer nav {
-      position: static; background: none; border: none; padding: 0;
-      display: flex; gap: 32px;
-    }
-
-    footer nav a {
-      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    .bw-footer nav { display: flex; gap: 36px; }
+    .bw-footer nav a {
+      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
       color: #555; text-decoration: none; transition: color 0.2s;
     }
+    .bw-footer nav a:hover { color: var(--off-white); }
 
-    footer nav a:hover { color: var(--clay); }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      nav { padding: 20px 24px; }
-      .nav-links { gap: 20px; }
-      .nav-links li:not(:last-child) { display: none; }
-
-      .hero { grid-template-columns: 1fr; }
-      .hero-left { padding: 60px 24px; }
-      .hero-right { display: none; }
-
-      section { padding: 64px 24px; }
-
-      .phase { grid-template-columns: 1fr; gap: 16px; }
-      .phase-num { font-size: 40px; }
-
-      .quote-band { padding: 60px 24px; }
-      .cta-band { padding: 64px 24px; }
-
-      footer { flex-direction: column; gap: 32px; padding: 40px 24px; text-align: center; }
-      footer nav { position: static; }
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .bw-hero { grid-template-columns: 1fr; }
+      .bw-hero-left, .bw-hero-right { padding: 72px 36px; }
+      .bw-pain, .bw-method, .bw-about, .bw-cta { padding: 72px 36px; }
+      .bw-pain-statement { padding: 48px 36px; }
+      .bw-pain-statement-inner { flex-direction: column; gap: 24px; }
+      .bw-pain-grid { grid-template-columns: 1fr; }
+      .bw-phases { grid-template-columns: 1fr; }
+      .bw-phase, .bw-phase:last-child, .bw-phase:nth-child(2) {
+        padding: 36px 0; border-right: none; border-bottom: 1px solid var(--birch-beige);
+      }
+      .bw-phase:last-child { border-bottom: none; }
+      .bw-values-inline { flex-direction: column; }
+      .bw-nav { padding: 0 24px; }
+      .bw-footer { flex-direction: column; gap: 24px; padding: 36px 24px; }
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="#" class="nav-logo">Birchwood&#8482;</a>
-  <ul class="nav-links">
-    <li><a href="#work">The Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="https://calendly.com/valerie-birchwood" target="_blank" class="btn-nav">Book a Call</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-left">
-    <p class="hero-eyebrow">Story strategy and messaging alignment for mission-driven organizations</p>
-    <h1 class="hero-headline">You already know something is off.</h1>
-    <p class="hero-sub">Your audience knows it too. Birchwood helps you close the gap between who you are and how you've been showing up in the world.</p>
-    <a href="https://calendly.com/valerie-birchwood" target="_blank" class="btn-primary">Book a Discovery Call</a>
-  </div>
-  <div class="hero-right">
-    <div class="hero-statement">
-      <blockquote style="font-weight:300; color:#999;">Plenty of agencies will take your money and grow your impressions. We'd rather help you figure out what you're actually saying.</blockquote>
-    </div>
-  </div>
-</section>
-
-<!-- PAIN POINTS -->
-<section class="problems" id="problems">
-  <div class="problems-inner">
-    <div class="problems-header">
-      <h2 class="problems-h2">Here's where misalignment usually shows up.</h2>
-    </div>
-    <div class="problems-grid">
-      <div class="problem-item">
-        <p class="problem-title">Brand Misalignment</p>
-        <p class="problem-body">Your external messaging no longer reflects your internal reality. The brand feels off, and your team can feel it too.</p>
-      </div>
-      <div class="problem-item">
-        <p class="problem-title">Story Drift</p>
-        <p class="problem-body">Growth, transition, or change has quietly separated your narrative from your actual mission. You've lost the thread.</p>
-      </div>
-      <div class="problem-item">
-        <p class="problem-title">Communication Breakdown</p>
-        <p class="problem-body">If you ask five people in your organization what you do and get five different answers, then you have a story problem.</p>
-      </div>
-      <div class="problem-item">
-        <p class="problem-title">Threshold</p>
-        <p class="problem-body">A new leader, a pivot, an expanding mission. This is the moment your story either gets carried forward with intention or gets lost in the noise of change.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- METHODOLOGY -->
-<section class="methodology" id="methodology">
-  <div class="methodology-inner">
-    <p class="section-label">How We Work</p>
-    <p>Most marketing conversations start with what people see first — a new website, a new campaign, new materials. Each one built on a story that was never properly articulated.</p>
-    <p>Birchwood works the other direction. We start from the inside first: who you actually are, what you actually believe, and where your message and your reality have drifted apart. We believe the most powerful story emerges from that discovery, and we build everything from there.</p>
-  </div>
-</section>
-
-<!-- THE WORK -->
-<section class="work" id="work">
-  <div class="work-inner">
-    <p class="section-label">The Work</p>
-    <h2 class="work-headline">Three phases. One unfolding story.</h2>
-    <p class="work-intro">Identity first. Story second. Expression third.</p>
-
-    <div class="phase">
-      <div class="phase-num">01</div>
-      <div class="phase-content">
-        <p class="phase-label">Identity</p>
-        <h3 class="phase-title">Who you actually are.</h3>
-        <p class="phase-body">It might seem odd to start here. But, over time, organizational mission can shift and drift. The result is a team that no longer knows how to talk about itself. Bandaid fixes like new campaigns, new branding, and better content won't solve this at the root.</p>
-        <p class="phase-body">We enter at the beginning. Through facilitated sessions with your leadership team, we close the gap between your mission and how you've been describing it, and produce a story framework your entire organization can speak from. The work is internal before it is ever external.</p>
-      </div>
-    </div>
-
-    <div class="phase">
-      <div class="phase-num">02</div>
-      <div class="phase-content">
-        <p class="phase-label">Story</p>
-        <h3 class="phase-title">How you say what's true.</h3>
-        <p class="phase-body">Knowing who you are and being able to articulate it are two different things. Most organizations have the identity. What they're missing is how to tie the heart of who they are with language that actually works — positioning, messaging architecture, and a throughline their team can use.</p>
-        <p class="phase-body">We identify your target audience and how to best reach them. We take what was found in the Identity phase and translate it into words that work. The result is a story framework your team can speak from without us in the room.</p>
-      </div>
-    </div>
-
-    <div class="phase">
-      <div class="phase-num">03</div>
-      <div class="phase-content">
-        <p class="phase-label">Expression</p>
-        <h3 class="phase-title">Your story, brought to life.</h3>
-        <p class="phase-body">Once the foundation is in place, we build. Birchwood and its network of specialists — documentary filmmakers, brand designers, and content strategists, each working at the highest level of their craft — translate your story into the content and media your organization needs to reach your audience effectively. Because the foundation work came first, everything that follows has something real to say.</p>
-        <ul class="expression-list">
-          <li><strong>Films and documentary video</strong><span>Organizational story films, campaign and fundraising video, short-form social content, built to award-winning documentary standards</span></li>
-          <li><strong>Content strategy and creation</strong><span>Editorial voice, website copy, and ongoing content your team can sustain</span></li>
-          <li><strong>Ongoing partnership and retainer</strong><span>A consistent strategic voice and content partner over time: monthly strategy, content development, campaign support, and as-needed counsel</span></li>
-          <li><strong>Trusted partners</strong><span>For visual identity, brand design, and logo systems, Birchwood connects you with vetted specialists who do this work at the highest level</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-inner">
-    <p class="section-label">About Birchwood</p>
-    <h2 class="about-headline">Strategy with soul.</h2>
-    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--clay);margin-bottom:28px;line-height:1.7">Faith-rooted imagination. Clarity without reduction.</p>
-    <p class="about-body">We ask questions most strategists won't, sit with complexity most processes skip, and help you find what's true before we tell you how to say it. We care about helping you spend every dollar wisely and in full integrity with your mission.</p>
-
-    <div class="about-divider"></div>
-
-    <p class="about-body">Valerie McGowan is an award-winning producer and executive producer who spent over a decade working alongside some of the best creative teams in the world, on campaigns for Emmy Award-winning and Oscar-shortlisted films, Hollywood studios, and nonprofit organizations.</p>
-    <p class="about-body">She learned what it takes to make a story reach people at the highest level. And she kept watching mission-driven organizations — the ones doing work that actually matters — pour money into websites and campaigns built on foundations that were never properly laid.</p>
-    <p class="about-body">Birchwood exists because of that gap. Not between organizations and their audiences, but between who organizations actually are and how they've been showing up in the world. Valerie built a practice around closing it, inside-out, every time.</p>
-
-    <div class="about-divider"></div>
-
-    <p class="section-label" style="color:var(--clay);margin-bottom:16px">The Collective</p>
-    <p class="about-body">We work with a curated network of specialists — documentary filmmakers, content strategists, and brand designers — each chosen for the standard of their craft and the depth of their collaboration. Every partner we bring is someone we'd stake our name on.</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-band" id="contact">
-  <h2 class="cta-headline">Ready to get clear?</h2>
-  <p class="cta-body" style="font-size:19px;">Your audience knows it too. Birchwood helps you close the gap between who you are and how you've been showing up in the world.</p>
-  <a href="https://calendly.com/valerie-birchwood" target="_blank" class="btn-white">Book a Discovery Call</a>
-</section>
-
-<footer>
-  <div>
-    <div class="footer-logo">Birchwood&#8482;</div>
-    <div class="footer-tagline">Rooted in story. Guided by values.</div>
-  </div>
-  <nav>
-    <a href="#work">The Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+  <!-- NAV -->
+  <nav class="bw-nav">
+    <a href="#" class="bw-logo">Birchwood&#8482;</a>
+    <ul class="bw-nav-links">
+      <li><a href="#work">The Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
-</footer>
+
+  <!-- HERO -->
+  <section class="bw-hero">
+    <div class="bw-hero-left">
+      <p class="bw-eyebrow">Brand &amp; Story Strategy</p>
+      <h1 class="bw-hero-headline">
+        Something true about your organization<br>
+        <em>isn't making it into the world.</em>
+      </h1>
+      <a href="#contact" class="bw-btn-primary">Book a Discovery Call</a>
+    </div>
+    <div class="bw-hero-right">
+      <div class="bw-hero-statement">
+        <p>The story is already inside your organization. The work is drawing it out and crafting it in a way that reaches the people who need you most.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="bw-pain" id="work">
+    <div class="bw-pain-inner">
+      <p class="bw-section-label">The Problem</p>
+      <h2 class="bw-section-heading">Here's where the story breaks down.</h2>
+      <p class="bw-pain-intro">A new website won't fix it. A new campaign won't fix it. When the problem is underneath the messaging, surface-level work only delays the cost.</p>
+      <div class="bw-pain-grid">
+        <div class="bw-pain-item">
+          <p class="bw-pain-title">Brand Misalignment</p>
+          <div class="bw-pain-rule"></div>
+          <p class="bw-pain-body">Your external messaging no longer reflects who you actually are. The brand feels off. Your team can feel it and so can the people you're trying to reach. No amount of new design will close that gap if the story underneath is not solid.</p>
+        </div>
+        <div class="bw-pain-item">
+          <p class="bw-pain-title">Story Drift</p>
+          <div class="bw-pain-rule"></div>
+          <p class="bw-pain-body">Growth, transition, or change has quietly, unintentionally separated your narrative from your actual mission. Somewhere along the way you lost the thread. You keep producing content, but it doesn't land the way it used to.</p>
+        </div>
+        <div class="bw-pain-item">
+          <p class="bw-pain-title">Communication Breakdown</p>
+          <div class="bw-pain-rule"></div>
+          <p class="bw-pain-body">If you ask five different people in your organization what you do and get five different answers, you have a story problem. That problem is showing up in every meeting, every pitch, every piece of content you produce.</p>
+        </div>
+        <div class="bw-pain-item">
+          <p class="bw-pain-title">Threshold</p>
+          <div class="bw-pain-rule"></div>
+          <p class="bw-pain-body">In stories, thresholds are transformation moments. A new leader. A pivot. An expanded mission. Moments of transition are also when identity is most at risk of getting swept up in newness until you lose sight of your core.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- HOW WE WORK -->
+  <section class="bw-method" id="method">
+    <div class="bw-method-inner">
+      <p class="bw-section-label">How We Work</p>
+      <h2 class="bw-section-heading">Every engagement follows three movements, but where you enter depends on what you need. The sequence doesn't change.</h2>
+      <div class="bw-phases">
+
+        <div class="bw-phase">
+          <span class="bw-phase-num">01</span>
+          <p class="bw-phase-name">Identity</p>
+          <h3 class="bw-phase-heading">Who you actually are.</h3>
+          <p class="bw-phase-body">Most organizations have never had a room where someone asked the real questions. Not about strategy or goals, but about truth. Through facilitated sessions with your leadership team, we surface the foundation your organization is actually built on. This is internal work before it is ever external work. When it's done, your team is aligned — and you have an identity your entire organization can speak from, confidently and consistently.</p>
+        </div>
+
+        <div class="bw-phase">
+          <span class="bw-phase-num">02</span>
+          <p class="bw-phase-name">Story</p>
+          <h3 class="bw-phase-heading">How you say it.</h3>
+          <p class="bw-phase-body">Once we know what's true, we build the language that carries it. A story framework your team can speak from without us in the room. Messaging that holds together across every channel, audience, and context because it all originates from the same true place.</p>
+        </div>
+
+        <div class="bw-phase">
+          <span class="bw-phase-num">03</span>
+          <p class="bw-phase-name">Expression</p>
+          <h3 class="bw-phase-heading">What you put into the world.</h3>
+          <p class="bw-phase-body">Once the foundation is in place, we build. Birchwood and its network of specialists — documentary filmmakers, brand designers, and content strategists, each working at the highest level of their craft — translate your story into the content your organization needs to reach your audience. Because the foundation work came first, everything that follows has something real to say.</p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="bw-about" id="about">
+    <div class="bw-about-inner">
+      <p class="bw-section-label">About Birchwood</p>
+      <h2 class="bw-section-heading">Two worlds that rarely speak to each other. One practice built at the intersection.</h2>
+
+      <div class="bw-values-inline">
+        <div class="bw-value-item">
+          <small>What guides us</small>
+          <span>Faith-Rooted Imagination</span>
+        </div>
+        <div class="bw-value-item">
+          <small>How we think</small>
+          <span>Clarity Without Reduction</span>
+        </div>
+        <div class="bw-value-item">
+          <small>What we build</small>
+          <span>Strategy With Soul</span>
+        </div>
+      </div>
+
+      <p class="bw-about-body">We are creative partners who believe the most important work an organization can do is understand who it actually is and learn to communicate that with integrity. We ask questions most strategists won't, sit with complexity most processes skip, and help you find what's true before we tell you how to say it. Most communications work starts outside and moves in. We work the other direction. <strong>Identity first. Story second. Expression third.</strong></p>
+
+      <p class="bw-about-body">We sit with organizations at moments of tension, transition, and transformation. Not to hand them a framework, but to do the slow work of listening that makes the right framework possible. The story is always already there. The work is drawing it out.</p>
+
+      <div class="bw-about-divider"></div>
+
+      <p class="bw-founder-label">Founded by</p>
+      <p class="bw-about-body">Valerie McGowan spent over a decade inside two worlds that rarely speak to each other: the highest levels of the entertainment industry, and the ground-level work of mission-driven organizations. In entertainment, she learned that the difference between a story that moves people and one that doesn't is almost never the budget. It's the clarity underneath it. Prior to entering social impact entertainment, she worked in nonprofit community development, where she learned how to earn trust inside organizations doing work that matters, and how to help them reach beyond their traditional boundaries without losing their core identity. Birchwood is where those two things meet.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bw-cta" id="contact">
+    <h2 class="bw-cta-headline">Let's find your story.</h2>
+    <p class="bw-cta-body">Your mission exists to reach the people who need it most. Birchwood helps make sure your story is strong enough to find them.</p>
+    <p class="bw-cta-note">We work with a small number of organizations at a time.</p>
+    <a href="#" class="bw-btn-clay">Book a Discovery Call</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bw-footer">
+    <div>
+      <div class="bw-footer-logo">Birchwood&#8482;</div>
+      <div class="bw-footer-tag">Rooted in story. Guided by values.</div>
+    </div>
+    <nav>
+      <a href="#work">The Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </footer>
 
 </body>
 </html>
