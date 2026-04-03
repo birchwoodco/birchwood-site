@@ -170,7 +170,7 @@
     }
 
     /* PAIN POINTS */
-    .bw-pain { background: var(--warm-white); padding: 112px 72px 0; }
+    .bw-pain { background: var(--warm-white); padding: 112px 72px; }
     .bw-pain-inner { max-width: 1160px; margin: 0 auto; }
     .bw-pain-intro {
       font-size: 16px; line-height: 1.8; color: var(--mid);
@@ -180,6 +180,7 @@
     .bw-pain-grid {
       display: grid; grid-template-columns: repeat(2, 1fr);
       gap: 2px; background: var(--birch-beige); border: 2px solid var(--birch-beige);
+      margin-bottom: 0;
     }
     .bw-pain-item {
       background: var(--warm-white); padding: 52px 56px; transition: background 0.25s;
@@ -206,7 +207,8 @@
     .bw-phase-num {
       font-family: 'Cormorant Garamond', serif;
       font-size: 72px; font-weight: 300;
-      color: var(--birch-beige); line-height: 1; margin-bottom: 24px; display: block;
+      color: var(--birch-beige); line-height: 1;
+      margin-bottom: 24px; display: block;
     }
     .bw-phase-name {
       font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
@@ -338,7 +340,7 @@
   <!-- ABOUT -->
   <section class="bw-about" id="about">
     <div class="bw-about-inner">
-      <p class="bw-section-label">About Birchwood</p>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 56px); font-weight: 300; text-align: center; color: var(--charcoal); letter-spacing: 0.04em; margin-bottom: 64px;">About Birchwood</h2>
 
       <div class="bw-values-inline">
         <div class="bw-value-item">
@@ -396,7 +398,7 @@
     <div class="bw-method-inner">
       <p class="bw-section-label">How We Work</p>
       <h2 class="bw-section-heading">Every engagement follows three movements, but where you enter depends on what you need. The sequence doesn't change.</h2>
-      <div class="bw-phases">
+      <div style="margin-top: 72px;" class="bw-phases">
 
         <div class="bw-phase">
           <span class="bw-phase-num">01</span>
@@ -444,6 +446,9 @@
   <!-- FOUNDER + COLLECTIVE -->
   <section class="bw-founder" id="founder">
     <div class="bw-founder-inner">
+      <div style="text-align:center; margin-bottom:64px;">
+        <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(40px,4.5vw,64px); font-weight:300; color:var(--charcoal); letter-spacing:0.03em;">About Birchwood</span>
+      </div>
 
       <p class="bw-small-label">Founded by</p>
       <p class="bw-body-text">Valerie McGowan spent over a decade inside two worlds that rarely speak to each other: the highest levels of the entertainment industry, and the ground-level work of mission-driven organizations. In entertainment, she learned that the difference between a story that moves people and one that doesn't is almost never the budget. It's the clarity underneath it. Prior to entering social impact entertainment, she worked in nonprofit community development, where she learned how to earn trust inside organizations doing work that matters, and how to help them reach beyond their traditional boundaries without losing their core identity. Birchwood is where those two things meet.</p>
