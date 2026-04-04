@@ -127,14 +127,19 @@
     }
     .bw-section-heading {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(28px, 2.4vw, 38px);
-      font-weight: 300; line-height: 1.25; color: var(--charcoal);
+      font-size: clamp(26px, 2.2vw, 36px);
+      font-weight: 300; line-height: 1.3; color: var(--charcoal);
     }
     .bw-body-text {
       font-size: 16px; line-height: 1.9; color: var(--mid);
       font-weight: 300; margin-bottom: 24px;
     }
     .bw-body-text strong { color: var(--charcoal); font-weight: 500; }
+    .bw-divider { width: 40px; height: 1px; background: var(--birch-beige); margin: 40px 0; }
+    .bw-small-label {
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--clay); margin-bottom: 16px;
+    }
 
     /* ABOUT */
     .bw-about { background: var(--off-white); padding: 112px 72px; }
@@ -142,7 +147,7 @@
 
     .bw-values-inline {
       display: flex; flex-wrap: wrap; gap: 0;
-      margin-bottom: 64px; margin-top: 48px;
+      margin-bottom: 64px;
       border-top: 1px solid var(--birch-beige);
     }
     .bw-value-item {
@@ -162,13 +167,6 @@
       color: var(--charcoal); display: block;
     }
 
-    .bw-divider { width: 40px; height: 1px; background: var(--birch-beige); margin: 40px 0; }
-
-    .bw-small-label {
-      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--clay); margin-bottom: 16px;
-    }
-
     /* PAIN POINTS */
     .bw-pain { background: var(--warm-white); padding: 112px 72px; }
     .bw-pain-inner { max-width: 1160px; margin: 0 auto; }
@@ -180,7 +178,6 @@
     .bw-pain-grid {
       display: grid; grid-template-columns: repeat(2, 1fr);
       gap: 2px; background: var(--birch-beige); border: 2px solid var(--birch-beige);
-      margin-bottom: 0;
     }
     .bw-pain-item {
       background: var(--warm-white); padding: 52px 56px; transition: background 0.25s;
@@ -196,19 +193,14 @@
     /* HOW WE WORK */
     .bw-method { background: var(--off-white); padding: 112px 72px; }
     .bw-method-inner { max-width: 1160px; margin: 0 auto; }
-    .bw-method-intro {
-      font-size: 15px; line-height: 1.8; color: var(--mid);
-      font-weight: 300; max-width: 520px; margin-top: 16px; margin-bottom: 72px;
-    }
     .bw-phases { display: grid; grid-template-columns: repeat(3, 1fr); }
     .bw-phase { padding: 0 56px 0 0; border-right: 1px solid var(--birch-beige); }
     .bw-phase:last-child { border-right: none; padding-right: 0; padding-left: 56px; }
     .bw-phase:nth-child(2) { padding-left: 56px; }
     .bw-phase-num {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 72px; font-weight: 300;
-      color: var(--birch-beige); line-height: 1;
-      margin-bottom: 24px; display: block;
+      font-size: 64px; font-weight: 300;
+      color: var(--birch-beige); line-height: 1; margin-bottom: 24px; display: block;
     }
     .bw-phase-name {
       font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
@@ -239,10 +231,7 @@
     /* FOUNDER + COLLECTIVE */
     .bw-founder { background: var(--warm-white); padding: 112px 72px; }
     .bw-founder-inner { max-width: 900px; margin: 0 auto; }
-    .bw-collective {
-      margin-top: 64px; padding-top: 48px;
-      border-top: 1px solid var(--birch-beige);
-    }
+    .bw-collective { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--birch-beige); }
 
     /* CTA */
     .bw-cta { background: var(--charcoal); padding: 112px 72px; text-align: center; }
@@ -332,7 +321,7 @@
     </div>
     <div class="bw-hero-right">
       <div class="bw-hero-statement">
-        <p>The story is already inside your organization. The work is drawing it out and crafting it in a way that reaches the people who need you most.</p>
+        <p>We work alongside organizations to surface what's real, shape it into language that holds, and carry it to the people who need it most.</p>
       </div>
     </div>
   </section>
@@ -340,7 +329,6 @@
   <!-- ABOUT -->
   <section class="bw-about" id="about">
     <div class="bw-about-inner">
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 56px); font-weight: 300; text-align: center; color: var(--charcoal); letter-spacing: 0.04em; margin-bottom: 64px;">About Birchwood</h2>
 
       <div class="bw-values-inline">
         <div class="bw-value-item">
@@ -360,6 +348,7 @@
       <p class="bw-body-text">We are creative partners who believe the most important work an organization can do is understand who it actually is and learn to communicate that with integrity. We ask questions most strategists won't, sit with complexity most processes skip, and help you find what's true before we tell you how to say it. Most communications work starts outside and moves in. We work the other direction. <strong>Identity first. Story second. Expression third.</strong></p>
 
       <p class="bw-body-text">We sit with organizations at moments of tension, transition, and transformation. Not to hand them a framework, but to do the slow work of listening that makes the right framework possible. The story is always already there. The work is drawing it out.</p>
+
     </div>
   </section>
 
