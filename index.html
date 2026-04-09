@@ -1,457 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Birchwood — Brand & Story Strategy for Mission-Driven Organizations</title>
-  <meta name="description" content="Birchwood helps mission-driven organizations surface what's real, align their story, and build content that carries them there." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Birchwood — Story Strategy & Film Production</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJQN9M6YH8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GJQN9M6YH8');
-  </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GJQN9M6YH8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GJQN9M6YH8');
+</script>
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --black:#1C1916;
+  --charcoal:#2E2A26;
+  --clay:#A47551;
+  --clay-dark:#8C6240;
+  --off-white:#F9F7F3;
+  --warm-white:#F2EDE6;
+  --beige:#E0D5C5;
+  --mid:#6B6560;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--off-white);color:var(--charcoal);-webkit-font-smoothing:antialiased;}
 
-    :root {
-      --black: #1C1916;
-      --charcoal: #2E2A26;
-      --clay: #A47551;
-      --clay-dark: #8C6240;
-      --off-white: #F9F7F3;
-      --warm-white: #F2EDE6;
-      --birch-beige: #E0D5C5;
-      --mid: #6B6560;
-    }
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:64px;background:rgba(249,247,243,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--beige);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;color:var(--charcoal);text-decoration:none;letter-spacing:0.03em;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--charcoal);}
 
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--off-white);
-      color: var(--charcoal);
-      -webkit-font-smoothing: antialiased;
-    }
+/* HERO */
+.hero{min-height:100vh;padding-top:64px;display:flex;flex-direction:column;background:var(--black);position:relative;overflow:hidden;}
+.hero-ring{position:absolute;border-radius:50%;border:1px solid rgba(164,117,81,0.1);pointer-events:none;}
+.hero-body{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:80px 96px;max-width:960px;}
+.hero-eyebrow{font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:40px;}
+.hero-hed{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,6vw,88px);font-weight:300;line-height:1.05;color:var(--off-white);margin-bottom:48px;}
+.hero-hed em{font-style:italic;color:var(--clay);}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.2vw,30px);font-weight:300;font-style:italic;color:rgba(249,247,243,0.7);line-height:1.65;max-width:560px;border-left:1px solid rgba(164,117,81,0.4);padding-left:24px;}
+.hero-foot{padding:40px 96px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:40px;}
+.hero-foot-label{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(164,117,81,0.8);}
+.hero-foot-values{display:flex;gap:32px;}
+.hero-foot-values span{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:rgba(249,247,243,0.55);font-weight:300;}
 
-    /* NAV */
-    .bw-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 64px; height: 68px;
-      background: rgba(249,247,243,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--birch-beige);
-    }
-    .bw-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px; font-weight: 400; letter-spacing: 0.04em;
-      color: var(--charcoal); text-decoration: none;
-    }
-    .bw-nav-links { display: flex; gap: 40px; list-style: none; }
-    .bw-nav-links a {
-      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--mid); text-decoration: none; font-weight: 400;
-      transition: color 0.2s;
-    }
-    .bw-nav-links a:hover { color: var(--charcoal); }
+/* CONVICTION */
+.conviction{background:var(--off-white);padding:120px 96px;}
+.conviction-inner{display:grid;grid-template-columns:1fr 2fr;gap:80px;max-width:1200px;margin:0 auto;align-items:start;}
+.conviction-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--clay);font-weight:500;padding-top:8px;position:sticky;top:88px;}
+.conviction-text p{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.2vw,30px);font-weight:300;line-height:1.65;color:var(--charcoal);margin-bottom:32px;}
+.conviction-text p:last-child{margin-bottom:0;}
+.conviction-text em{font-style:italic;color:var(--clay);}
 
-    /* HERO */
-    .bw-hero {
-      display: grid; grid-template-columns: 1fr 1fr;
-      min-height: 100vh; padding-top: 68px;
-    }
-    .bw-hero-left {
-      background: var(--black);
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 96px 72px; position: relative; overflow: hidden;
-    }
-    .bw-hero-left::after {
-      content: ''; position: absolute; bottom: -120px; left: -80px;
-      width: 400px; height: 400px;
-      border: 1px solid rgba(164,117,81,0.12); border-radius: 50%;
-      pointer-events: none;
-    }
-    .bw-eyebrow {
-      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--clay); font-weight: 500; margin-bottom: 32px;
-    }
-    .bw-hero-headline {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(40px, 4.2vw, 68px);
-      line-height: 1.1; font-weight: 300;
-      color: var(--off-white);
-      position: relative; z-index: 1;
-    }
-    .bw-hero-headline em { font-style: italic; color: var(--clay); font-weight: 300; }
-    .bw-hero-right {
-      background: var(--warm-white);
-      display: flex; align-items: center; justify-content: center;
-      padding: 96px 72px; position: relative; overflow: hidden;
-    }
-    .bw-hero-right::before {
-      content: ''; position: absolute; top: -100px; right: -100px;
-      width: 420px; height: 420px;
-      border: 1px solid rgba(164,117,81,0.15); border-radius: 50%;
-    }
-    .bw-hero-right::after {
-      content: ''; position: absolute; bottom: -60px; left: -60px;
-      width: 260px; height: 260px;
-      border: 1px solid rgba(164,117,81,0.1); border-radius: 50%;
-    }
-    .bw-hero-statement { position: relative; z-index: 1; max-width: 380px; }
-    .bw-hero-statement p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 26px; line-height: 1.6;
-      font-weight: 300; font-style: italic; color: var(--charcoal);
-    }
+/* VALUES BAND */
+.values-band{background:var(--off-white);border-top:1px solid var(--beige);border-bottom:1px solid var(--beige);}
+.values-band-inner{display:grid;grid-template-columns:repeat(3,1fr);max-width:1200px;margin:0 auto;padding:0 96px;}
+.value-col{padding:48px 48px 48px 0;border-right:1px solid var(--beige);}
+.value-col:last-child{border-right:none;padding-right:0;padding-left:48px;}
+.value-col:nth-child(2){padding-left:48px;}
+.value-col-tag{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:10px;}
+.value-col-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;font-weight:300;color:var(--charcoal);}
 
-    /* SHARED */
-    .bw-section-label {
-      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--clay); font-weight: 500; margin-bottom: 20px;
-    }
-    .bw-section-heading {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(26px, 2.2vw, 36px);
-      font-weight: 300; line-height: 1.3; color: var(--charcoal);
-    }
-    .bw-body-text {
-      font-size: 16px; line-height: 1.9; color: var(--mid);
-      font-weight: 300; margin-bottom: 24px;
-    }
-    .bw-body-text strong { color: var(--charcoal); font-weight: 500; }
-    .bw-divider { width: 40px; height: 1px; background: var(--birch-beige); margin: 40px 0; }
-    .bw-small-label {
-      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--clay); margin-bottom: 16px;
-    }
+/* RECOGNITION */
+.recognition{background:var(--warm-white);padding:96px 96px;border-top:1px solid var(--beige);}
+.recognition-inner{max-width:760px;margin:0 auto;}
+.recognition p{font-size:17px;line-height:1.9;color:var(--mid);font-weight:300;margin-bottom:24px;}
+.recognition p:last-child{margin-bottom:0;}
+.recognition strong{color:var(--charcoal);font-weight:500;}
 
-    /* ABOUT */
-    .bw-about { background: var(--off-white); padding: 112px 72px; }
-    .bw-about-inner { max-width: 900px; margin: 0 auto; }
+/* HOW WE WORK */
+.method{background:var(--off-white);padding:120px 96px;}
+.method-inner{max-width:1200px;margin:0 auto;}
+.method-header{margin-bottom:80px;}
+.method-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:20px;}
+.method-hed{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,2.8vw,42px);font-weight:300;line-height:1.3;color:var(--charcoal);max-width:680px;}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);}
+.phase{padding:0 56px 0 0;border-right:1px solid var(--beige);}
+.phase:nth-child(2){padding-left:56px;}
+.phase:last-child{border-right:none;padding-right:0;padding-left:56px;}
+.phase-num{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;color:var(--beige);line-height:1;margin-bottom:20px;display:block;}
+.phase-tag{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:14px;}
+.phase-hed{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--charcoal);margin-bottom:18px;line-height:1.3;}
+.phase-body{font-size:14px;line-height:1.9;color:var(--mid);font-weight:300;margin-bottom:24px;}
+.phase-list{list-style:none;border-top:1px solid var(--beige);padding-top:18px;}
+.phase-list li{font-size:11px;color:var(--mid);padding:6px 0;border-bottom:1px solid var(--beige);display:flex;align-items:center;gap:10px;letter-spacing:0.02em;}
+.phase-list li::before{content:'';width:3px;height:3px;background:var(--clay);border-radius:50%;flex-shrink:0;}
 
-    .bw-values-inline {
-      display: flex; flex-wrap: wrap; gap: 0;
-      margin-bottom: 64px;
-      border-top: 1px solid var(--birch-beige);
-    }
-    .bw-value-item {
-      flex: 1; min-width: 180px;
-      padding: 32px 32px 32px 0;
-      border-right: 1px solid var(--birch-beige);
-    }
-    .bw-value-item:last-child { border-right: none; padding-right: 0; padding-left: 32px; }
-    .bw-value-item:nth-child(2) { padding-left: 32px; }
-    .bw-value-item small {
-      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--clay); font-weight: 400; display: block; margin-bottom: 10px;
-    }
-    .bw-value-item span {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px; font-style: italic; font-weight: 300;
-      color: var(--charcoal); display: block;
-    }
+/* ABOUT */
+.about{background:var(--warm-white);padding:120px 96px 0;border-top:1px solid var(--beige);}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;max-width:1200px;margin:0 auto;}
+.about-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:24px;}
+.about-left p{font-size:15px;line-height:1.7;color:var(--mid);font-weight:300;margin-bottom:20px;}
+.about-right{display:flex;align-items:flex-start;padding-top:8px;}
+.about-right p{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2vw,26px);font-style:italic;font-weight:300;color:var(--charcoal);line-height:1.7;}
 
-    /* PAIN POINTS — quiet diagnostic */
-    .bw-pain { background: var(--warm-white); padding: 112px 72px; }
-    .bw-pain-inner { max-width: 900px; margin: 0 auto; }
-    .bw-pain-intro {
-      font-size: 16px; line-height: 1.8; color: var(--mid);
-      font-weight: 300; margin-top: 20px; margin-bottom: 64px;
-    }
-    .bw-pain-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
-    }
-    .bw-pain-item {
-      padding: 36px 48px 36px 0;
-      border-top: 1px solid var(--birch-beige);
-    }
-    .bw-pain-item:nth-child(even) {
-      padding-left: 48px; padding-right: 0;
-      border-left: 1px solid var(--birch-beige);
-    }
-    .bw-pain-item:nth-child(3),
-    .bw-pain-item:nth-child(4) {
-      border-bottom: 1px solid var(--birch-beige);
-    }
-    .bw-pain-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 32px; font-weight: 300;
-      color: var(--birch-beige); line-height: 1; margin-bottom: 12px;
-    }
-    .bw-pain-title {
-      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--clay); font-weight: 500; margin-bottom: 10px;
-    }
-    .bw-pain-body {
-      font-size: 14px; line-height: 1.8; color: var(--mid); font-weight: 300;
-    }
+/* COLLECTIVE */
+.collective{width:100%;padding:56px 96px;border-top:1px solid var(--beige);background:var(--warm-white);}
+.collective-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:16px;}
+.collective-body{font-size:16px;line-height:1.8;color:var(--mid);font-weight:300;max-width:760px;}
 
-    /* HOW WE WORK */
-    .bw-method { background: var(--off-white); padding: 112px 72px; }
-    .bw-method-inner { max-width: 1160px; margin: 0 auto; }
-    .bw-phases { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .bw-phase { padding: 0 56px 0 0; border-right: 1px solid var(--birch-beige); }
-    .bw-phase:last-child { border-right: none; padding-right: 0; padding-left: 56px; }
-    .bw-phase:nth-child(2) { padding-left: 56px; }
-    .bw-phase-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 64px; font-weight: 300;
-      color: var(--birch-beige); line-height: 1; margin-bottom: 24px; display: block;
-    }
-    .bw-phase-name {
-      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--clay); font-weight: 500; margin-bottom: 16px;
-    }
-    .bw-phase-heading {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px; font-weight: 400;
-      color: var(--charcoal); margin-bottom: 20px; line-height: 1.3;
-    }
-    .bw-phase-body {
-      font-size: 14px; line-height: 1.9; color: var(--mid);
-      font-weight: 300; margin-bottom: 24px;
-    }
-    .bw-phase-deliverables {
-      list-style: none; border-top: 1px solid var(--birch-beige); padding-top: 20px;
-    }
-    .bw-phase-deliverables li {
-      font-size: 12px; color: var(--mid); letter-spacing: 0.02em;
-      padding: 7px 0; border-bottom: 1px solid var(--birch-beige);
-      display: flex; align-items: center; gap: 10px;
-    }
-    .bw-phase-deliverables li::before {
-      content: ''; width: 3px; height: 3px;
-      background: var(--clay); border-radius: 50%; flex-shrink: 0;
-    }
+/* ASSESSMENT */
+.assessment{background:var(--off-white);padding:96px 96px;border-top:1px solid var(--beige);text-align:center;}
+.assessment-inner{max-width:540px;margin:0 auto;}
+.assessment-hed{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.5vw,48px);font-weight:300;color:var(--charcoal);margin-bottom:20px;line-height:1.2;}
+.assessment-body{font-size:16px;line-height:1.8;color:var(--mid);font-weight:300;margin-bottom:40px;}
+.btn-clay{display:block;width:100%;text-align:center;background:var(--clay);color:#fff;padding:18px 40px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:background 0.2s;}
+.btn-clay:hover{background:var(--clay-dark);}
 
-    /* FOUNDER + COLLECTIVE */
-    .bw-founder { background: var(--warm-white); padding: 112px 72px; }
-    .bw-founder-inner { max-width: 900px; margin: 0 auto; }
-    .bw-collective { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--birch-beige); }
+/* FOOTER */
+footer{background:#3E3A35;padding:80px 96px;text-align:center;}
+.foot-hed{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3vw,44px);font-weight:300;color:#F9F7F3;margin-bottom:20px;line-height:1.2;}
+.foot-body{font-size:16px;line-height:1.8;color:#C8C3BC;font-weight:300;max-width:500px;margin:0 auto 16px;}
+.foot-body a{color:#D8D2C8;text-decoration:underline;}
+.foot-note{font-size:12px;color:#8C8680;letter-spacing:0.1em;font-style:italic;margin-bottom:48px;}
+.foot-divider{width:1px;height:32px;background:#5a5550;margin:0 auto 32px;}
+.foot-tag{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#8C8680;margin-bottom:20px;}
+.foot-nav{display:flex;justify-content:center;gap:32px;}
+.foot-nav a{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#8C8680;text-decoration:none;transition:color 0.2s;}
+.foot-nav a:hover{color:#F9F7F3;}
 
-    /* CTA */
-    .bw-cta { background: var(--charcoal); padding: 112px 72px; text-align: center; }
-    .bw-cta-headline {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 4vw, 60px);
-      font-weight: 300; color: var(--off-white);
-      margin-bottom: 20px; line-height: 1.15;
-    }
-    .bw-cta-body {
-      font-size: 16px; line-height: 1.75; color: #888;
-      max-width: 480px; margin: 0 auto 12px; font-weight: 300;
-    }
-    .bw-cta-note {
-      font-size: 12px; color: #555; letter-spacing: 0.04em;
-      margin-bottom: 0; font-style: italic;
-    }
-
-    /* FOOTER */
-    .bw-footer {
-      background: var(--black); padding: 48px 72px;
-      text-align: center;
-      border-top: 1px solid #2a2620;
-    }
-    .bw-footer-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 20px; color: var(--off-white); font-weight: 400; margin-bottom: 8px;
-    }
-    .bw-footer-tag {
-      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #444; margin-bottom: 24px;
-    }
-    .bw-footer nav { display: flex; gap: 36px; justify-content: center; }
-    .bw-footer nav a {
-      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-      color: #555; text-decoration: none; transition: color 0.2s;
-    }
-    .bw-footer nav a:hover { color: var(--off-white); }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .bw-hero { grid-template-columns: 1fr; }
-      .bw-hero-left, .bw-hero-right { padding: 72px 36px; }
-      .bw-about, .bw-pain, .bw-method, .bw-founder, .bw-cta { padding: 72px 36px; }
-      .bw-phases { grid-template-columns: 1fr; }
-      .bw-phase, .bw-phase:last-child, .bw-phase:nth-child(2) {
-        padding: 36px 0; border-right: none; border-bottom: 1px solid var(--birch-beige);
-      }
-      .bw-phase:last-child { border-bottom: none; }
-      .bw-values-inline { flex-direction: column; }
-      .bw-value-item, .bw-value-item:last-child, .bw-value-item:nth-child(2) {
-        padding: 24px 0; border-right: none; border-bottom: 1px solid var(--birch-beige);
-      }
-      .bw-nav { padding: 0 24px; }
-      .bw-footer { padding: 36px 24px; }
-    }
-  </style>
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:0 24px;}
+  .hero-body,.hero-foot{padding-left:32px;padding-right:32px;}
+  .conviction,.recognition,.method,.about,.assessment,.collective{padding-left:32px;padding-right:32px;}
+  .conviction-inner{grid-template-columns:1fr;}
+  .values-band-inner{grid-template-columns:1fr;padding:0 32px;}
+  .value-col,.value-col:nth-child(2),.value-col:last-child{padding:32px 0;border-right:none;border-bottom:1px solid var(--beige);}
+  .value-col:last-child{border-bottom:none;}
+  .phases{grid-template-columns:1fr;}
+  .phase,.phase:nth-child(2),.phase:last-child{padding:36px 0;border-right:none;border-bottom:1px solid var(--beige);}
+  .phase:last-child{border-bottom:none;}
+  .about-inner{grid-template-columns:1fr;}
+  footer{padding:64px 32px;}
+}
+</style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="bw-nav">
-    <a href="#" class="bw-logo">Birchwood&#8482;</a>
-    <ul class="bw-nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">The Work</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<nav>
+  <a href="#" class="nav-logo">Birchwood&#8482;</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#method">The Work</a></li>
+    <li><a href="#assessment">Start Here</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ring" style="width:600px;height:600px;top:-200px;right:-150px;"></div>
+  <div class="hero-ring" style="width:300px;height:300px;bottom:-80px;left:60px;"></div>
+  <div class="hero-body">
+    <p class="hero-eyebrow">Story Strategy &amp; Film Production</p>
+    <h1 class="hero-hed">
+      Something true<br>about your organization<br>
+      <em>isn't making it<br>into the world.</em>
+    </h1>
+    <p class="hero-sub">Your story, told with integrity, to the people who need you most.</p>
+  </div>
+  <div class="hero-foot">
+    <span class="hero-foot-label">What guides us</span>
+    <div class="hero-foot-values">
+      <span>Faith-Rooted Imagination</span>
+      <span>Clarity Without Reduction</span>
+      <span>Strategy With Soul</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONVICTION -->
+<section class="conviction" id="about">
+  <div class="conviction-inner">
+    <p class="conviction-label">About Birchwood</p>
+    <div class="conviction-text">
+      <p>We are creative partners who believe the most important work an organization can do is understand who it actually is and learn to communicate that with integrity. We ask questions most strategists won't, sit with complexity most processes skip, and help you find what's real before we tell you how to say it.</p>
+      <p>Most communications work starts outside and moves in. We work the other direction. <em>Identity first. Story second. Expression third.</em></p>
+      <p>We sit with organizations at moments of tension, transition, and transformation. Not to hand them a framework, but to do the slow work of listening that makes the right framework possible. The story is always already there. The work is drawing it out.</p>
+      <p>We are especially at home with mission-driven, faith-informed, or organizations focused on social good. These are contexts where story carries weight that goes beyond marketing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES BAND -->
+<div class="values-band">
+  <div class="values-band-inner">
+    <div class="value-col">
+      <p class="value-col-tag">What guides us</p>
+      <p class="value-col-name">Faith-Rooted Imagination</p>
+    </div>
+    <div class="value-col">
+      <p class="value-col-tag">How we think</p>
+      <p class="value-col-name">Clarity Without Reduction</p>
+    </div>
+    <div class="value-col">
+      <p class="value-col-tag">What we build</p>
+      <p class="value-col-name">Strategy With Soul</p>
+    </div>
+  </div>
+</div>
+
+<!-- RECOGNITION -->
+<section class="recognition">
+  <div class="recognition-inner">
+    <p>If your team gives different answers about who you are, if your messaging feels off, if you've invested in campaigns that didn't land the way they should, that's not a marketing problem. <strong>It's a story problem.</strong> It starts somewhere specific, and it's fixable.</p>
+    <p>Plenty of agencies will grow your impressions. They'll build a website, run a campaign, produce a video. But if the story underneath doesn't reflect the actual depth and uniqueness of your organization, none of it sticks. You end up with better packaging around a message that was never properly found. We start underneath.</p>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="method" id="method">
+  <div class="method-inner">
+    <div class="method-header">
+      <p class="method-label">How We Work</p>
+      <h2 class="method-hed">Every engagement follows three movements, but where you enter depends on what you need. The sequence doesn't change.</h2>
+    </div>
+    <div class="phases">
+      <div class="phase">
+        <span class="phase-num">01</span>
+        <p class="phase-tag">Identity</p>
+        <h3 class="phase-hed">Who you actually are.</h3>
+        <p class="phase-body">Most organizations have never had a room where someone asked the real questions. Through facilitated sessions with your stakeholders, we surface the foundation your organization is actually built on. When it's done, your team is aligned and can speak from that foundation with confidence.</p>
+      </div>
+      <div class="phase">
+        <span class="phase-num">02</span>
+        <p class="phase-tag">Story</p>
+        <h3 class="phase-hed">How you say it.</h3>
+        <p class="phase-body">Once we know what's real, we build the language that carries it. A story framework your team can speak from without us in the room. Messaging that holds together across every channel and context because it all originates from the same place.</p>
+      </div>
+      <div class="phase">
+        <span class="phase-num">03</span>
+        <p class="phase-tag">Expression</p>
+        <h3 class="phase-hed">What you put into the world.</h3>
+        <p class="phase-body">We produce films, campaigns, and content built on what we've uncovered together. The difference is that ours originates from what is distinctly yours. Our network of documentary filmmakers, content strategists, writers, and creatives translate your story into content that reaches your audience.</p>
+        <ul class="phase-list">
+          <li>Films and documentary video</li>
+          <li>Content strategy and creation</li>
+          <li>Ongoing partnership and retainer</li>
+          <li>Trusted partners for visual identity and brand design</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT — founder -->
+<section class="about">
+  <div class="about-inner">
+    <div class="about-left">
+      <p class="about-label">Founded by</p>
+      <p>Valerie McGowan spent over a decade inside two worlds that rarely speak to each other: the highest levels of the entertainment industry, and the ground-level work of mission-driven organizations. In entertainment, she learned that the difference between a story that moves people and one that doesn't is almost never the budget. It's the clarity underneath it.</p>
+      <p>Prior to entering social impact entertainment, she worked in nonprofit community development, where she learned how to earn trust inside organizations doing work that matters, and how to help them reach beyond their traditional boundaries without losing their core identity. Birchwood is where those two things meet.</p>
+    </div>
+    <div class="about-right">
+      <p>"A deep story, told with care, to the people it belongs to."</p>
+    </div>
+  </div>
+  <div class="collective">
+    <p class="collective-label">The Collective</p>
+    <p class="collective-body">A curated network of documentary filmmakers, content strategists, writers, and creatives Valerie has worked alongside over a decade. People who listen well, work at a high level, and bring the craft that mission-driven work deserves.</p>
+  </div>
+</section>
+
+<!-- ASSESSMENT -->
+<section class="assessment" id="assessment">
+  <div class="assessment-inner">
+    <h2 class="assessment-hed">Start by finding your gap.</h2>
+    <p class="assessment-body">Most organizations know something is off before they can name it. The Story Gap Assessment takes a few minutes, names a specific gap, and gives a clear description of what it is costing you. From there, you decide what comes next.</p>
+    <a href="https://valerie-5jbpl8ae.scoreapp.com" target="_blank" class="btn-clay">Take the Story Gap Assessment</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h2 class="foot-hed">Let's find your story.</h2>
+  <p class="foot-body">Your mission exists to reach the people who need it most. Birchwood helps make sure your story is strong enough to find them. Already know what you need? <a href="https://calendly.com/valerie-birchwood" target="_blank">Book a Discovery Call directly.</a></p>
+  <p class="foot-note">We work with a small number of organizations at a time.</p>
+  <div class="foot-divider"></div>
+  <p class="foot-tag">Rooted in story. Guided by values.</p>
+  <nav class="foot-nav">
+    <a href="#about">About</a>
+    <a href="#method">The Work</a>
+    <a href="#assessment">Start Here</a>
   </nav>
-
-  <!-- HERO -->
-  <section class="bw-hero">
-    <div class="bw-hero-left">
-      <p class="bw-eyebrow">Story Strategy &amp; Film Production</p>
-      <h1 class="bw-hero-headline">
-        Something true about your organization<br>
-        <em>isn't making it into the world.</em>
-      </h1>
-    </div>
-    <div class="bw-hero-right">
-      <div class="bw-hero-statement">
-        <p>Your story, told with integrity, to the people who need you most.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="bw-about" id="about">
-    <div class="bw-about-inner">
-      <div class="bw-values-inline">
-        <div class="bw-value-item">
-          <small>What guides us</small>
-          <span>Faith-Rooted Imagination</span>
-        </div>
-        <div class="bw-value-item">
-          <small>How we think</small>
-          <span>Clarity Without Reduction</span>
-        </div>
-        <div class="bw-value-item">
-          <small>What we build</small>
-          <span>Strategy With Soul</span>
-        </div>
-      </div>
-
-      <p class="bw-body-text">We are creative partners who believe the most important work an organization can do is understand who it actually is and learn to communicate that with integrity. We ask questions most strategists won't, sit with complexity most processes skip, and help you find what's real before we tell you how to say it. Most communications work starts outside and moves in. We work the other direction. <strong>Identity first. Story second. Expression third.</strong></p>
-
-      <p class="bw-body-text">We sit with organizations at moments of tension, transition, and transformation. Not to hand them a framework, but to do the slow work of listening that makes the right framework possible. The story is always already there. The work is drawing it out.</p>
-
-      <p class="bw-body-text">We are especially at home with faith-based organizations, global initiatives, and mission-driven work — contexts where story carries weight that goes beyond marketing.</p>
-    </div>
-  </section>
-
-  <!-- PAIN POINTS -->
-  <section class="bw-pain" id="work">
-    <div class="bw-pain-inner">
-      <p class="bw-section-label">The Problem</p>
-      <h2 class="bw-section-heading">Here's where the story breaks down.</h2>
-      <p class="bw-pain-intro">Plenty of agencies will grow your impressions. They'll build a website, run a campaign, produce a video. But if the story underneath doesn't reflect the actual depth and uniqueness of your organization, none of it sticks. You end up with better packaging around a message that was never properly found. We start underneath.</p>
-
-      <div class="bw-pain-grid">
-        <div class="bw-pain-item">
-          <p class="bw-pain-num">01</p>
-          <p class="bw-pain-title">Brand Misalignment</p>
-          <p class="bw-pain-body">Your external messaging no longer reflects who you actually are. The brand feels off. Your team can feel it and so can the people you're trying to reach. No amount of new design will close that gap if the story underneath is not solid.</p>
-        </div>
-        <div class="bw-pain-item">
-          <p class="bw-pain-num">02</p>
-          <p class="bw-pain-title">Story Drift</p>
-          <p class="bw-pain-body">Growth, transition, or change has quietly, unintentionally separated your narrative from your actual mission. Somewhere along the way you lost the thread. You keep producing content, but it doesn't land the way it used to.</p>
-        </div>
-        <div class="bw-pain-item">
-          <p class="bw-pain-num">03</p>
-          <p class="bw-pain-title">Communication Breakdown</p>
-          <p class="bw-pain-body">If you ask five different people in your organization what you do and get five different answers, you have a story problem. That problem is showing up in every meeting, every pitch, every piece of content you produce.</p>
-        </div>
-        <div class="bw-pain-item">
-          <p class="bw-pain-num">04</p>
-          <p class="bw-pain-title">Threshold Moment</p>
-          <p class="bw-pain-body">In stories, thresholds are transformation moments. A new leader. A pivot. An expanded mission. Moments of transition are also when identity is most at risk of getting swept up in newness until you lose sight of your core.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW WE WORK -->
-  <section class="bw-method" id="method">
-    <div class="bw-method-inner">
-      <p class="bw-section-label">How We Work</p>
-      <h2 class="bw-section-heading">Every engagement follows three movements, but where you enter depends on what you need. The sequence doesn't change.</h2>
-      <div style="margin-top: 72px;" class="bw-phases">
-
-        <div class="bw-phase">
-          <span class="bw-phase-num">01</span>
-          <p class="bw-phase-name">Identity</p>
-          <h3 class="bw-phase-heading">Who you actually are.</h3>
-          <p class="bw-phase-body">Most organizations have never had a room where someone asked the real questions. Through facilitated sessions with your stakeholders, we surface the foundation your organization is actually built on. When it's done, your team is aligned and can speak from that foundation with confidence.</p>
-        </div>
-
-        <div class="bw-phase">
-          <span class="bw-phase-num">02</span>
-          <p class="bw-phase-name">Story</p>
-          <h3 class="bw-phase-heading">How you say it.</h3>
-          <p class="bw-phase-body">Once we know what's real and authentic to your work, we build the language that carries it. We craft a story framework your team can speak from without us in the room. Messaging that holds together across every channel, audience, and context because it all originates from the same true place.</p>
-        </div>
-
-        <div class="bw-phase">
-          <span class="bw-phase-num">03</span>
-          <p class="bw-phase-name">Expression</p>
-          <h3 class="bw-phase-heading">What you put into the world.</h3>
-          <p class="bw-phase-body">We produce films, campaigns, and content built on what we've uncovered together to best serve your target audience. The difference is that ours originates from what is distinctly yours. Our network of documentary filmmakers, content strategists, writers, and creatives translate your story into content that reaches your audience.</p>
-          <ul class="bw-phase-deliverables">
-            <li>Films and documentary video</li>
-            <li>Content strategy and creation</li>
-            <li>Ongoing partnership and retainer</li>
-            <li>Trusted partners for visual identity and brand design</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOUNDER + COLLECTIVE -->
-  <section class="bw-founder" id="founder">
-    <div class="bw-founder-inner">
-      <p class="bw-small-label">Founded by</p>
-      <p class="bw-body-text">Valerie McGowan spent over a decade inside two worlds that rarely speak to each other: the highest levels of the entertainment industry, and the ground-level work of mission-driven organizations. In entertainment, she learned that the difference between a story that moves people and one that doesn't is almost never the budget. It's the clarity underneath it. Prior to entering social impact entertainment, she worked in nonprofit community development, where she learned how to earn trust inside organizations doing work that matters, and how to help them reach beyond their traditional boundaries without losing their core identity. Birchwood is where those two things meet.</p>
-
-      <div class="bw-collective">
-        <p class="bw-small-label">The Collective</p>
-        <p class="bw-body-text">Birchwood's collective is a curated network of some of the best people Valerie has worked alongside over a decade in strategy and film marketing — documentary filmmakers, content strategists, writers, and creatives who listen well, work at a high level, and bring the kind of craft and care that mission-driven work deserves.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ASSESSMENT -->
-  <section style="background:var(--warm-white); padding:112px 72px; text-align:center;">
-    <div style="max-width:560px; margin:0 auto;">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(32px,3.5vw,52px); font-weight:300; color:var(--charcoal); margin-bottom:20px; line-height:1.2;">Start by finding your gap.</h2>
-      <p style="font-size:16px; line-height:1.8; color:var(--mid); font-weight:300; margin-bottom:40px;">Most organizations know something is off before they can name it. The Story Gap Assessment takes a few minutes and names a specific gap and gives a clear description of what it is costing you. From there, you decide what comes next.</p>
-      <a href="https://valerie-5jbpl8ae.scoreapp.com" target="_blank" style="display:block; width:100%; text-align:center; background:var(--clay); color:#fff; padding:18px 40px; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; text-decoration:none; transition:background 0.2s;">Take the Story Gap Assessment</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer style="background:var(--black); padding:80px 72px; text-align:center; border-top:1px solid #2a2620;">
-    <div style="max-width:560px; margin:0 auto;">
-      <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3vw,42px); font-weight:300; color:var(--off-white); margin-bottom:16px; line-height:1.2;">Let's find your story.</p>
-      <p style="font-size:15px; line-height:1.8; color:#666; font-weight:300; margin-bottom:32px;">Your mission exists to reach the people who need it most. Birchwood helps make sure your story is strong enough to find them. Already know what you need? <a href="https://calendly.com/valerie-birchwood" target="_blank" style="color:#888; text-decoration:underline;">Book a Discovery Call directly.</a></p>
-      <p style="font-size:11px; color:#444; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:40px; font-style:italic;">We work with a small number of organizations at a time.</p>
-      <div style="border-top:1px solid #2a2620; padding-top:32px; display:flex; justify-content:center; gap:36px;">
-        <a href="#about" style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#444; text-decoration:none;">About</a>
-        <a href="#work" style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#444; text-decoration:none;">The Work</a>
-        <a href="#contact" style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#444; text-decoration:none;">Contact</a>
-      </div>
-    </div>
-  </footer>
+</footer>
 
 </body>
 </html>
