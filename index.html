@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Birchwood — Brand & Story Strategy for Mission-Driven Organizations</title>
-  <meta name="description" content="Birchwood helps mission-driven organizations surface what's true, align their story, and build content that carries them there." />
+  <meta name="description" content="Birchwood helps mission-driven organizations surface what's real, align their story, and build content that carries them there." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 
-  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJQN9M6YH8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -86,18 +85,10 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(40px, 4.2vw, 68px);
       line-height: 1.1; font-weight: 300;
-      color: var(--off-white); margin-bottom: 48px;
+      color: var(--off-white);
       position: relative; z-index: 1;
     }
     .bw-hero-headline em { font-style: italic; color: var(--clay); font-weight: 300; }
-    .bw-btn-primary {
-      display: inline-flex; align-items: center; justify-content: center;
-      background: var(--clay); color: #fff; padding: 16px 32px;
-      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-      font-weight: 500; text-decoration: none;
-      transition: background 0.2s; align-self: flex-start; position: relative; z-index: 1;
-    }
-    .bw-btn-primary:hover { background: var(--clay-dark); }
     .bw-hero-right {
       background: var(--warm-white);
       display: flex; align-items: center; justify-content: center;
@@ -167,28 +158,40 @@
       color: var(--charcoal); display: block;
     }
 
-    /* PAIN POINTS */
+    /* PAIN POINTS — quiet diagnostic */
     .bw-pain { background: var(--warm-white); padding: 112px 72px; }
-    .bw-pain-inner { max-width: 1160px; margin: 0 auto; }
+    .bw-pain-inner { max-width: 900px; margin: 0 auto; }
     .bw-pain-intro {
       font-size: 16px; line-height: 1.8; color: var(--mid);
-      font-weight: 300; max-width: 700px;
-      margin-top: 20px; margin-bottom: 72px;
+      font-weight: 300; margin-top: 20px; margin-bottom: 64px;
     }
     .bw-pain-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 2px; background: var(--birch-beige); border: 2px solid var(--birch-beige);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
     }
     .bw-pain-item {
-      background: var(--warm-white); padding: 52px 56px; transition: background 0.25s;
+      padding: 36px 48px 36px 0;
+      border-top: 1px solid var(--birch-beige);
     }
-    .bw-pain-item:hover { background: #F7F2EB; }
-    .bw-pain-title {
+    .bw-pain-item:nth-child(even) {
+      padding-left: 48px; padding-right: 0;
+      border-left: 1px solid var(--birch-beige);
+    }
+    .bw-pain-item:nth-child(3),
+    .bw-pain-item:nth-child(4) {
+      border-bottom: 1px solid var(--birch-beige);
+    }
+    .bw-pain-num {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 24px; font-weight: 400; color: var(--charcoal); margin-bottom: 16px;
+      font-size: 32px; font-weight: 300;
+      color: var(--birch-beige); line-height: 1; margin-bottom: 12px;
     }
-    .bw-pain-rule { width: 32px; height: 1px; background: var(--clay); margin-bottom: 20px; }
-    .bw-pain-body { font-size: 15px; line-height: 1.85; color: var(--mid); font-weight: 300; }
+    .bw-pain-title {
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--clay); font-weight: 500; margin-bottom: 10px;
+    }
+    .bw-pain-body {
+      font-size: 14px; line-height: 1.8; color: var(--mid); font-weight: 300;
+    }
 
     /* HOW WE WORK */
     .bw-method { background: var(--off-white); padding: 112px 72px; }
@@ -247,30 +250,24 @@
     }
     .bw-cta-note {
       font-size: 12px; color: #555; letter-spacing: 0.04em;
-      margin-bottom: 48px; font-style: italic;
+      margin-bottom: 0; font-style: italic;
     }
-    .bw-btn-clay {
-      display: inline-flex; align-items: center; justify-content: center;
-      background: var(--clay); color: #fff; padding: 18px 40px;
-      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-      font-weight: 500; text-decoration: none; transition: background 0.2s;
-    }
-    .bw-btn-clay:hover { background: var(--clay-dark); }
 
     /* FOOTER */
     .bw-footer {
-      background: var(--black); padding: 40px 72px;
-      display: flex; align-items: center; justify-content: space-between;
+      background: var(--black); padding: 48px 72px;
+      text-align: center;
       border-top: 1px solid #2a2620;
     }
     .bw-footer-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 20px; color: var(--off-white); font-weight: 400; margin-bottom: 6px;
+      font-size: 20px; color: var(--off-white); font-weight: 400; margin-bottom: 8px;
     }
     .bw-footer-tag {
-      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #444;
+      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #444; margin-bottom: 24px;
     }
-    .bw-footer nav { display: flex; gap: 36px; }
+    .bw-footer nav { display: flex; gap: 36px; justify-content: center; }
     .bw-footer nav a {
       font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
       color: #555; text-decoration: none; transition: color 0.2s;
@@ -282,7 +279,6 @@
       .bw-hero { grid-template-columns: 1fr; }
       .bw-hero-left, .bw-hero-right { padding: 72px 36px; }
       .bw-about, .bw-pain, .bw-method, .bw-founder, .bw-cta { padding: 72px 36px; }
-      .bw-pain-grid { grid-template-columns: 1fr; }
       .bw-phases { grid-template-columns: 1fr; }
       .bw-phase, .bw-phase:last-child, .bw-phase:nth-child(2) {
         padding: 36px 0; border-right: none; border-bottom: 1px solid var(--birch-beige);
@@ -293,7 +289,7 @@
         padding: 24px 0; border-right: none; border-bottom: 1px solid var(--birch-beige);
       }
       .bw-nav { padding: 0 24px; }
-      .bw-footer { flex-direction: column; gap: 24px; padding: 36px 24px; }
+      .bw-footer { padding: 36px 24px; }
     }
   </style>
 </head>
@@ -317,7 +313,6 @@
         Something true about your organization<br>
         <em>isn't making it into the world.</em>
       </h1>
-      <a href="#contact" class="bw-btn-primary">Book a Discovery Call</a>
     </div>
     <div class="bw-hero-right">
       <div class="bw-hero-statement">
@@ -329,7 +324,6 @@
   <!-- ABOUT -->
   <section class="bw-about" id="about">
     <div class="bw-about-inner">
-
       <div class="bw-values-inline">
         <div class="bw-value-item">
           <small>What guides us</small>
@@ -350,7 +344,6 @@
       <p class="bw-body-text">We sit with organizations at moments of tension, transition, and transformation. Not to hand them a framework, but to do the slow work of listening that makes the right framework possible. The story is always already there. The work is drawing it out.</p>
 
       <p class="bw-body-text">We are especially at home with faith-based organizations, global initiatives, and mission-driven work — contexts where story carries weight that goes beyond marketing.</p>
-
     </div>
   </section>
 
@@ -360,25 +353,26 @@
       <p class="bw-section-label">The Problem</p>
       <h2 class="bw-section-heading">Here's where the story breaks down.</h2>
       <p class="bw-pain-intro">Plenty of agencies will grow your impressions. They'll build a website, run a campaign, produce a video. But if the story underneath doesn't reflect the actual depth and uniqueness of your organization, none of it sticks. You end up with better packaging around a message that was never properly found. We start underneath.</p>
+
       <div class="bw-pain-grid">
         <div class="bw-pain-item">
+          <p class="bw-pain-num">01</p>
           <p class="bw-pain-title">Brand Misalignment</p>
-          <div class="bw-pain-rule"></div>
           <p class="bw-pain-body">Your external messaging no longer reflects who you actually are. The brand feels off. Your team can feel it and so can the people you're trying to reach. No amount of new design will close that gap if the story underneath is not solid.</p>
         </div>
         <div class="bw-pain-item">
+          <p class="bw-pain-num">02</p>
           <p class="bw-pain-title">Story Drift</p>
-          <div class="bw-pain-rule"></div>
           <p class="bw-pain-body">Growth, transition, or change has quietly, unintentionally separated your narrative from your actual mission. Somewhere along the way you lost the thread. You keep producing content, but it doesn't land the way it used to.</p>
         </div>
         <div class="bw-pain-item">
+          <p class="bw-pain-num">03</p>
           <p class="bw-pain-title">Communication Breakdown</p>
-          <div class="bw-pain-rule"></div>
           <p class="bw-pain-body">If you ask five different people in your organization what you do and get five different answers, you have a story problem. That problem is showing up in every meeting, every pitch, every piece of content you produce.</p>
         </div>
         <div class="bw-pain-item">
+          <p class="bw-pain-num">04</p>
           <p class="bw-pain-title">Threshold Moment</p>
-          <div class="bw-pain-rule"></div>
           <p class="bw-pain-body">In stories, thresholds are transformation moments. A new leader. A pivot. An expanded mission. Moments of transition are also when identity is most at risk of getting swept up in newness until you lose sight of your core.</p>
         </div>
       </div>
@@ -397,12 +391,6 @@
           <p class="bw-phase-name">Identity</p>
           <h3 class="bw-phase-heading">Who you actually are.</h3>
           <p class="bw-phase-body">Most organizations have never had a room where someone asked the real questions. Through facilitated sessions with your stakeholders, we surface the foundation your organization is actually built on. When it's done, your team is aligned and can speak from that foundation with confidence.</p>
-          <ul class="bw-phase-deliverables">
-            <li>Story Gap Diagnostic</li>
-            <li>Story Alignment Canvas sessions</li>
-            <li>Proof Stories truth test</li>
-            <li>Story Gap Report</li>
-          </ul>
         </div>
 
         <div class="bw-phase">
@@ -410,19 +398,13 @@
           <p class="bw-phase-name">Story</p>
           <h3 class="bw-phase-heading">How you say it.</h3>
           <p class="bw-phase-body">Once we know what's real and authentic to your work, we build the language that carries it. We craft a story framework your team can speak from without us in the room. Messaging that holds together across every channel, audience, and context because it all originates from the same true place.</p>
-          <ul class="bw-phase-deliverables">
-            <li>Strategic messaging framework</li>
-            <li>Voice and tone guidelines</li>
-            <li>Key messages for consistent communication</li>
-            <li>Team Talking Points</li>
-          </ul>
         </div>
 
         <div class="bw-phase">
           <span class="bw-phase-num">03</span>
           <p class="bw-phase-name">Expression</p>
           <h3 class="bw-phase-heading">What you put into the world.</h3>
-          <p class="bw-phase-body">We produce films, campaigns, and content built on what we've uncovered together. The difference between our production work and anyone else's is that ours originates from what's distinctly yours — not a brief, not a brand deck, but the real thing. Birchwood and its network of specialists — documentary filmmakers, content strategists, writers, and creatives, some of whom come from within the communities we serve — translate your story into the content your organization needs to reach your audience.</p>
+          <p class="bw-phase-body">We produce films, campaigns, and content built on what we've uncovered together to best serve your target audience. The difference is that ours originates from what is distinctly yours. Our network of documentary filmmakers, content strategists, writers, and creatives translate your story into content that reaches your audience.</p>
           <ul class="bw-phase-deliverables">
             <li>Films and documentary video</li>
             <li>Content strategy and creation</li>
@@ -438,7 +420,6 @@
   <!-- FOUNDER + COLLECTIVE -->
   <section class="bw-founder" id="founder">
     <div class="bw-founder-inner">
-
       <p class="bw-small-label">Founded by</p>
       <p class="bw-body-text">Valerie McGowan spent over a decade inside two worlds that rarely speak to each other: the highest levels of the entertainment industry, and the ground-level work of mission-driven organizations. In entertainment, she learned that the difference between a story that moves people and one that doesn't is almost never the budget. It's the clarity underneath it. Prior to entering social impact entertainment, she worked in nonprofit community development, where she learned how to earn trust inside organizations doing work that matters, and how to help them reach beyond their traditional boundaries without losing their core identity. Birchwood is where those two things meet.</p>
 
@@ -446,35 +427,30 @@
         <p class="bw-small-label">The Collective</p>
         <p class="bw-body-text">Birchwood's collective is a curated network of some of the best people Valerie has worked alongside over a decade in strategy and film marketing — documentary filmmakers, content strategists, writers, and creatives who listen well, work at a high level, and bring the kind of craft and care that mission-driven work deserves.</p>
       </div>
-
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="bw-cta" id="contact">
-    <h2 class="bw-cta-headline">Let's find your story.</h2>
-    <p class="bw-cta-body">Your mission exists to reach the people who need it most. Birchwood helps make sure your story is strong enough to find them.</p>
-    <p class="bw-cta-note">We work with a small number of organizations at a time.</p>
-
-    <div style="max-width:560px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 56px; margin-top: 56px;">
-      <h3 style="font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3vw,42px); font-weight:300; color:var(--off-white); margin-bottom:20px; line-height:1.2;">Start by finding your gap.</h3>
-      <p style="font-size:16px; line-height:1.8; color:#888; font-weight:300; margin-bottom:40px;">Most organizations know something is off before they can name it. The Story Gap Assessment takes a few minutes and names a specific gap and gives a clear description of what it is costing you. From there, you decide what comes next.</p>
-      <a href="https://valerie-5jbpl8ae.scoreapp.com" target="_blank" style="display:block; width:100%; text-align:center; background:var(--clay); color:#fff; padding:18px 40px; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; text-decoration:none; transition:background 0.2s; margin-bottom:24px;">Take the Story Gap Assessment</a>
-      <p style="font-size:12px; color:#555; text-align:center;">Already know what you need? <a href="https://calendly.com/valerie-birchwood" target="_blank" style="color:#888; text-decoration:underline;">Book a Discovery Call directly.</a></p>
+  <!-- ASSESSMENT -->
+  <section style="background:var(--warm-white); padding:112px 72px; text-align:center;">
+    <div style="max-width:560px; margin:0 auto;">
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(32px,3.5vw,52px); font-weight:300; color:var(--charcoal); margin-bottom:20px; line-height:1.2;">Start by finding your gap.</h2>
+      <p style="font-size:16px; line-height:1.8; color:var(--mid); font-weight:300; margin-bottom:40px;">Most organizations know something is off before they can name it. The Story Gap Assessment takes a few minutes and names a specific gap and gives a clear description of what it is costing you. From there, you decide what comes next.</p>
+      <a href="https://valerie-5jbpl8ae.scoreapp.com" target="_blank" style="display:block; width:100%; text-align:center; background:var(--clay); color:#fff; padding:18px 40px; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; text-decoration:none; transition:background 0.2s;">Take the Story Gap Assessment</a>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bw-footer">
-    <div>
-      <div class="bw-footer-logo">Birchwood&#8482;</div>
-      <div class="bw-footer-tag">Rooted in story. Guided by values.</div>
+  <footer style="background:var(--black); padding:80px 72px; text-align:center; border-top:1px solid #2a2620;">
+    <div style="max-width:560px; margin:0 auto;">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3vw,42px); font-weight:300; color:var(--off-white); margin-bottom:16px; line-height:1.2;">Let's find your story.</p>
+      <p style="font-size:15px; line-height:1.8; color:#666; font-weight:300; margin-bottom:32px;">Your mission exists to reach the people who need it most. Birchwood helps make sure your story is strong enough to find them. Already know what you need? <a href="https://calendly.com/valerie-birchwood" target="_blank" style="color:#888; text-decoration:underline;">Book a Discovery Call directly.</a></p>
+      <p style="font-size:11px; color:#444; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:40px; font-style:italic;">We work with a small number of organizations at a time.</p>
+      <div style="border-top:1px solid #2a2620; padding-top:32px; display:flex; justify-content:center; gap:36px;">
+        <a href="#about" style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#444; text-decoration:none;">About</a>
+        <a href="#work" style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#444; text-decoration:none;">The Work</a>
+        <a href="#contact" style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#444; text-decoration:none;">Contact</a>
+      </div>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#work">The Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </footer>
 
 </body>
